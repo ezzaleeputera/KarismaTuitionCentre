@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background_home"
+    tools:context=".Home_Activity">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_Jadual"
+                android:layout_width="303dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:fadingEdge="horizontal|vertical"
+                android:foregroundTint="#FFFFFF"
+                android:text="@string/jadual"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_Kehadiran"
+                android:layout_width="303dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/kehadiran"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_Yuran"
+                android:layout_width="303dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="4dp"
+                android:text="YURAN"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_Pendaftaran"
+                android:layout_width="303dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/pendaftaran"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_LPrestasi"
+                android:layout_width="303dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/laporan_prestasi"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/btn_MaklumBalas"
+                android:layout_width="303dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/maklum_balas"
+                android:textSize="30sp"
+                />
+        </TableLayout>
+    </ScrollView>
+

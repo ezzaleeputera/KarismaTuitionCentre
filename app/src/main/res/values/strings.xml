@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Karisma Tuition Centre</string>
+    <string name="emel">emel</string>
+    <string name="kata_laluan">kata laluan</string>
+    <string name="hantar">Hantar</string>
+    <string name="logo">Logo</string>
+    <string name="log_masuk">Log Masuk</string>
+    <string name="kehadiran">Kehadiran</string>
+    <string name="jadual">JADUAL</string>
+    <string name="pendaftaran">PENDAFTARAN</string>
+    <string name="maklum_balas">Maklum Balas</string>
+    <string name="laporan_prestasi">LAPORAN PRESTASI</string>
+</resources>
