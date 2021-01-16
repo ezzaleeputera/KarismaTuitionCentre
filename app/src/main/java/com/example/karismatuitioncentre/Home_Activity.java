@@ -23,10 +23,10 @@ public class Home_Activity extends AppCompatActivity {
         btnMaklumBalas = findViewById(R.id.btn_MaklumBalas);
 
         btnJadual.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home_Activity.class));
+            startActivity(new Intent(getApplicationContext(), Jadual_Activity.class));
         });
         btnKehadiran.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home_Activity.class));
+            startActivity(new Intent(getApplicationContext(), Jadual_Activity.class));
         });
         btnYuran.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), Home_Activity.class));
@@ -38,7 +38,7 @@ public class Home_Activity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Home_Activity.class));
         });
         btnMaklumBalas.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home_Activity.class));
+            startActivity(new Intent(getApplicationContext(), MaklumBalas_Activity_Pelajar_IbuBapa.class));
         });
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.karismatuitioncentre">
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +19,22 @@
         <activity android:name=".Home_Activity">
 
         </activity>
+        <activity android:name=".Jadual_Activity">
+
+        </activity>
+        <activity android:name=".Hari_Activity">
+
+        </activity>
+        <activity android:name=".MaklumBalas_Activity_Pengajar">
+
+        </activity>
+        <activity android:name=".MaklumBalas_Activity_Pelajar_IbuBapa">
+
+        </activity>
+        <activity android:name=".MaklumBalas_AddData_Pelajar_IbuBapa">
+
+        </activity>
+
     </application>
 
 </manifest>

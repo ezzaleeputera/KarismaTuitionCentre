@@ -10,4 +10,14 @@
     <string name="pendaftaran">PENDAFTARAN</string>
     <string name="maklum_balas">Maklum Balas</string>
     <string name="laporan_prestasi">LAPORAN PRESTASI</string>
+    <string name="halaman_utama">HALAMAN UTAMA</string>
+    <string name="yuran">YURAN</string>
+    <string name="jumaat">Jumaat</string>
+    <string name="khamis">Khamis</string>
+    <string name="rabu">Rabu</string>
+    <string name="selasa">Selasa</string>
+    <string name="tambah_kelas_hari_ini">Tambah Kelas Hari Ini</string>
+    <string name="seterusnya">Seterusnya</string>
+    <string name="nama">Nama</string>
+    <string name="tambah_maklum_balas">Tambah Maklum Balas</string>
 </resources>

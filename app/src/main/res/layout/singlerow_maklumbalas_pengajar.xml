@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="2sp"
+        android:paddingRight="2sp">
+
+        <TextView
+            android:id="@+id/textView_mbTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingRight="2sp"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:text="maklum balas tajuk"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_mbDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_mbTitle"
+            android:paddingLeft="12sp"
+            android:paddingRight="2sp"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:text="maklum balas desc"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/deleteicon"
+            android:layout_width="86dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/textView_mbDesc"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
