@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/innardslogo"
-    tools:context=".Jadual_Activity">
+    tools:context=".jadual.Jadual_Activity">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:text="@string/jadual"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#191717"
+            android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
 
@@ -34,10 +34,11 @@
             android:layout_width="303dp"
             android:layout_height="100dp"
             android:layout_marginTop="40dp"
+            android:backgroundTint="#37AAEA"
             android:fadingEdge="horizontal|vertical"
-            android:foregroundTint="#FFFFFF"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="Isnin"
             android:textSize="30sp" />
 
@@ -46,8 +47,11 @@
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="@string/selasa"
             android:textSize="30sp" />
 
@@ -56,8 +60,11 @@
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="@string/rabu"
             android:textSize="30sp" />
 
@@ -67,8 +74,11 @@
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
             android:text="@string/khamis"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:textSize="30sp" />
 
         <Button
@@ -77,8 +87,11 @@
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="0dp"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="@string/jumaat"
             android:textSize="30sp" />
         <Button
@@ -86,23 +99,29 @@
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="Sabtu"
             android:textSize="30sp"
             />
+
         <Button
             android:id="@+id/btn_Ahad"
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="4dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#37AAEA"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
             android:shadowColor="#000000"
-            android:shadowRadius="2"
+            android:shadowRadius="30"
             android:text="Ahad"
-            android:textSize="30sp"
-            />
+            android:textSize="30sp" />
     </TableLayout>
 </ScrollView>
 

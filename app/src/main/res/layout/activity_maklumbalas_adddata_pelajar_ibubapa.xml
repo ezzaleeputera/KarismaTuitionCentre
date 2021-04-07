@@ -6,7 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:gravity="center"
-tools:context=".MaklumBalas_AddData_Pelajar_IbuBapa"
+tools:context=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa"
     android:background="@drawable/innardslogo">
 
 
@@ -42,14 +42,14 @@ tools:context=".MaklumBalas_AddData_Pelajar_IbuBapa"
     android:layout_marginBottom="15dp"
     android:id="@+id/add_submit"
     android:textSize="20sp"
-    android:text="Add to Firebase"/>
+    android:text="Hantar"/>
 
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/add_back"
     android:textSize="20sp"
-    android:text="Back"/>
+    android:text="Kembali"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

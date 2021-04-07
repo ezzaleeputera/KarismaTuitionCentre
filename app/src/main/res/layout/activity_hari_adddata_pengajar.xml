@@ -1,75 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".Hari_Activity"
+    android:gravity="center"
+
     android:background="@drawable/innardslogo">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/tambah_kelas_hari_ini"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_subjek"
+        android:textSize="20sp"
+        android:hint="Nama Subjek"
+        android:inputType="text"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000"/>
 
-<!--        <EditText-->
-<!--            android:id="@+id/etslot"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:hint="Slot No."-->
-<!--            android:padding="8dp"-->
-<!--            android:paddingTop="15sp"-->
-<!--            android:paddingBottom="5sp" />-->
-        <EditText
-            android:id="@+id/etsubjek"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Subjek"
-            android:padding="8dp"
-            android:paddingTop="15sp"
-            android:paddingBottom="5sp" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_pengajar"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:hint="Nama Subjek"
+        android:layout_marginBottom="15dp"
+        android:textColor="#000"/>
 
-        <EditText
-            android:id="@+id/etpengajar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Nama Pengajar"
-            android:padding="8dp"
-            android:paddingTop="15sp" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_masa"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Waktu Kelas: cth.7am-8am"
+        android:layout_marginBottom="15dp"/>
 
-        <EditText
-            android:id="@+id/etmasa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Masa"
-            android:padding="8dp"
-            android:paddingTop="15sp" />
 
-        <Button
-            android:id="@+id/btnSetKelas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tambah" />
-    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/add_submit"
+        android:textSize="20sp"
+        android:text="Hantar"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerviewHari">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_back"
+        android:textSize="20sp"
+        android:text="Kembali"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -9,32 +9,92 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KarismaTuitionCentre">
-        <activity android:name=".Login_Activity">
+        <activity android:name=".register_login.Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home_Activity">
 
-        </activity>
-        <activity android:name=".Jadual_Activity">
-
-        </activity>
-        <activity android:name=".Hari_Activity">
-
-        </activity>
-        <activity android:name=".MaklumBalas_Activity_Pengajar">
-
-        </activity>
-        <activity android:name=".MaklumBalas_Activity_Pelajar_IbuBapa">
-
-        </activity>
-        <activity android:name=".MaklumBalas_AddData_Pelajar_IbuBapa">
+        <activity android:name=".home.Home_Activity_Pengajar">
 
         </activity>
 
+        <activity android:name=".jadual.Jadual_Activity">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Isnin_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Selasa_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Rabu_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Khamis_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Jumaat_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Sabtu_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Ahad_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Isnin_AddData_Pengajar">
+
+        </activity>
+
+
+         <activity android:name=".jadual.j_pengajar.Selasa_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Rabu_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Khamis_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Jumaat_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Sabtu_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".jadual.j_pengajar.Ahad_AddData_Pengajar">
+
+        </activity>
+
+        <activity android:name=".maklumbalas.MaklumBalas_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa">
+
+
+
+        </activity>
     </application>
 
 </manifest>

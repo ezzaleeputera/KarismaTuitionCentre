@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_login"
-    tools:context=".Login_Activity">
+    tools:context=".register_login.Login_Activity">
 
     <TextView
         android:id="@+id/titleReg"
@@ -19,6 +19,7 @@
         android:shadowDy="0"
         android:shadowRadius="50"
         android:text="@string/pendaftaran"
+        android:textColor="#191717"
         android:textAllCaps="true"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -33,6 +34,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:text="Pelajar"
+        android:textColor="#191717"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +110,7 @@
         android:layout_height="37dp"
         android:layout_marginTop="76dp"
         android:text="Ibu Bapa"
+        android:textColor="#191717"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -234,14 +237,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:text="@string/hantar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
+        app:layout_constraintTop_toBottomOf="@+id/katalaluan_regIB"
+        app:layout_constraintVertical_bias="0.57" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
