@@ -21,6 +21,7 @@ public class Jadual_Model
     }
 
     public void setPengajar(String pengajar) { this.pengajar = pengajar; }
+
     public String getSubjek() { return subjek; }
 
     public void setSubjek(String subjek) { this.subjek = subjek; }

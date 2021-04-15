@@ -69,14 +69,14 @@
         app:layout_constraintTop_toBottomOf="@+id/nama_regP" />
 
     <EditText
-        android:id="@+id/kataLaluan_regP"
+        android:id="@+id/noKP_regP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:autofillHints=""
-        android:hint="@string/kata_laluan"
+        android:hint="nombor kad pengenalan"
         android:imeActionLabel=""
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -91,6 +91,27 @@
         app:layout_constraintTop_toBottomOf="@+id/emel_regP" />
 
 
+    <EditText
+        android:id="@+id/kl_regP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:hint="@string/kata_laluan"
+        android:imeActionLabel=""
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:shadowColor="#121111"
+        android:shadowRadius="5"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noKP_regP" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -116,9 +137,9 @@
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kataLaluan_regP" />
+        app:layout_constraintTop_toBottomOf="@+id/kl_regP" />
 
     <CheckBox
         android:id="@+id/cb_BM"
@@ -215,20 +236,30 @@
         app:layout_constraintTop_toBottomOf="@+id/cb_Kim" />
 
     <Button
-        android:id="@+id/btn_LogMasuk"
+        android:id="@+id/btn_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/seterusnya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kataLaluan_LogMAsuk"
+        app:layout_constraintTop_toBottomOf="@+id/cb_BC"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="69dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.karismatuitioncentre.R;
 import com.example.karismatuitioncentre.jadual.Jadual_Activity;
 import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa;
+import com.example.karismatuitioncentre.register_login.RegisterStudent_Activity;
 
 public class Home_Activity_Pengajar extends AppCompatActivity {
     TextView btnJadual, btnKehadiran, btnYuran, btnPendaftaran, btnLporanPrestasi, btnMaklumBalas;
@@ -36,7 +37,7 @@ public class Home_Activity_Pengajar extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
         });
         btnPendaftaran.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
+            startActivity(new Intent(getApplicationContext(), RegisterStudent_Activity.class));
         });
         btnLporanPrestasi.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
