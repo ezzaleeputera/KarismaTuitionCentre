@@ -1,18 +1,15 @@
 
 package com.example.karismatuitioncentre.jadual.j_pelajaribubapa;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.jadual.Jadual_Model;
+import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_Model_Pengajar;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Rabu_Activity_Pelajar_IbuBapa extends AppCompatActivity {
@@ -28,10 +25,10 @@ public class Rabu_Activity_Pelajar_IbuBapa extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<Jadual_Model> options= new FirebaseRecyclerOptions
-                .Builder<Jadual_Model>()
+        FirebaseRecyclerOptions<Jadual_Model_Pengajar> options= new FirebaseRecyclerOptions
+                .Builder<Jadual_Model_Pengajar>()
                 .setQuery(FirebaseDatabase.getInstance().getReference()
-                        .child("Jadual_Rabu"),Jadual_Model.class).build();
+                        .child("Jadual_Rabu"), Jadual_Model_Pengajar.class).build();
 
         adapter= new Rabu_Adapter_Pelajar_IbuBapa(options);
         recyclerView.setAdapter(adapter);

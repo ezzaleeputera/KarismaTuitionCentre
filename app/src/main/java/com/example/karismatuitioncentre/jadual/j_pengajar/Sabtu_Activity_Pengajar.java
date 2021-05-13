@@ -10,7 +10,6 @@ package com.example.karismatuitioncentre.jadual.j_pengajar;
         import android.view.View;
 
         import com.example.karismatuitioncentre.R;
-        import com.example.karismatuitioncentre.jadual.Jadual_Model;
         import com.firebase.ui.database.FirebaseRecyclerOptions;
         import com.google.android.material.floatingactionbutton.FloatingActionButton;
         import com.google.firebase.database.FirebaseDatabase;
@@ -28,22 +27,17 @@ public class Sabtu_Activity_Pengajar extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<Jadual_Model> options= new FirebaseRecyclerOptions
-                .Builder<Jadual_Model>()
+        FirebaseRecyclerOptions<Jadual_Model_Pengajar> options= new FirebaseRecyclerOptions
+                .Builder<Jadual_Model_Pengajar>()
                 .setQuery(FirebaseDatabase.getInstance().getReference()
-                        .child("Jadual_Sabtu"),Jadual_Model.class).build();
+                        .child("Jadual_Sabtu"), Jadual_Model_Pengajar.class).build();
 
         adapter= new Sabtu_Adapter_Pengajar(options);
         recyclerView.setAdapter(adapter);
 
         fb=(FloatingActionButton)findViewById(R.id.fabAdd);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),
-                        Sabtu_AddData_Pengajar.class));
-            }
-        });
+        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),
+                Sabtu_AddData_Pengajar.class)));
 
     }
     @Override

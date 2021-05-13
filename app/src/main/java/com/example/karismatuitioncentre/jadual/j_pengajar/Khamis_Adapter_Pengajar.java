@@ -14,50 +14,40 @@ package com.example.karismatuitioncentre.jadual.j_pengajar;
 
 
         import com.example.karismatuitioncentre.R;
-        import com.example.karismatuitioncentre.jadual.Jadual_Model;
         import com.firebase.ui.database.FirebaseRecyclerAdapter;
         import com.firebase.ui.database.FirebaseRecyclerOptions;
         import com.google.firebase.database.FirebaseDatabase;
 
+        import java.util.Objects;
 
-public class Khamis_Adapter_Pengajar extends FirebaseRecyclerAdapter<Jadual_Model,
+
+public class Khamis_Adapter_Pengajar extends FirebaseRecyclerAdapter<Jadual_Model_Pengajar,
         Khamis_Adapter_Pengajar.myviewholder>
 {
-    public Khamis_Adapter_Pengajar(@NonNull FirebaseRecyclerOptions<Jadual_Model> options) {
+    public Khamis_Adapter_Pengajar(@NonNull FirebaseRecyclerOptions<Jadual_Model_Pengajar> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myviewholder holder, int a, @NonNull Jadual_Model model)
+    protected void onBindViewHolder(@NonNull myviewholder holder, int a, @NonNull Jadual_Model_Pengajar model)
     {
         holder.subjek.setText(model.getSubjek());
         holder.pengajar.setText(model.getPengajar());
         holder.masa.setText(model.getMasa());
 
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.subjek.getContext());
-                builder.setTitle("Panel Delete");
-                builder.setMessage("Anda pasti mahu buang(delete) subjek tersebut bagi hari ini?");
+        holder.delete.setOnClickListener(view -> {
+            AlertDialog.Builder builder=new AlertDialog.Builder(holder.subjek.getContext());
+            builder.setTitle("Panel Delete");
+            builder.setMessage("Anda pasti mahu buang(delete) subjek tersebut bagi hari ini?");
 
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Jadual_Khamis")
-                                .child(getRef(a).getKey()).removeValue();
-                    }
-                });
+            builder.setPositiveButton("Yes", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference().child("Jadual_Khamis")
+                    .child(Objects.requireNonNull(getRef(a).getKey())).removeValue());
 
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setNegativeButton("No", (dialogInterface, i) -> {
 
-                    }
-                });
+            });
 
-                builder.show();
-            }
+            builder.show();
         });
 
     }

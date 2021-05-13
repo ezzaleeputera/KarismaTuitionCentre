@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/innardslogo"
-    tools:context=".jadual.Jadual_Activity">
+    tools:context=".jadual.j_pengajar.Jadual_Activity_Pengajar">
 
     <TableLayout
         android:layout_width="match_parent"

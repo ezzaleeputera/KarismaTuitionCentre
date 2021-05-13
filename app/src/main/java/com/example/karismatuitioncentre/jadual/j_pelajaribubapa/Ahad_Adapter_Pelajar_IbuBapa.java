@@ -11,20 +11,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.jadual.Jadual_Model;
+import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_Model_Pengajar;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 
-public class Ahad_Adapter_Pelajar_IbuBapa extends FirebaseRecyclerAdapter<Jadual_Model,
+public class Ahad_Adapter_Pelajar_IbuBapa extends FirebaseRecyclerAdapter<Jadual_Model_Pengajar,
         Ahad_Adapter_Pelajar_IbuBapa.myviewholder>
 {
-    public Ahad_Adapter_Pelajar_IbuBapa(@NonNull FirebaseRecyclerOptions<Jadual_Model> options) {
+    public Ahad_Adapter_Pelajar_IbuBapa(@NonNull FirebaseRecyclerOptions<Jadual_Model_Pengajar> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myviewholder holder, int a, @NonNull Jadual_Model model)
+    protected void onBindViewHolder(@NonNull myviewholder holder, int a, @NonNull Jadual_Model_Pengajar model)
     {
         holder.subjek.setText(model.getSubjek());
         holder.pengajar.setText(model.getPengajar());

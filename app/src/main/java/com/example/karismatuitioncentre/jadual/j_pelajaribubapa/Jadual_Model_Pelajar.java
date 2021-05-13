@@ -1,15 +1,15 @@
-package com.example.karismatuitioncentre.jadual;
-        import java.io.Serializable;
+package com.example.karismatuitioncentre.jadual.j_pelajaribubapa;
+import java.io.Serializable;
 
 
-public class Jadual_Model
+public class Jadual_Model_Pelajar
 {
     String subjek,pengajar,masa;
-    Jadual_Model()
+    Jadual_Model_Pelajar()
     {
 
     }
-    public Jadual_Model(String pengajar, String subjek, String masa) {
+    public Jadual_Model_Pelajar(String pengajar, String subjek, String masa) {
         this.subjek = subjek;
         this.pengajar = pengajar;
         this.masa = masa;

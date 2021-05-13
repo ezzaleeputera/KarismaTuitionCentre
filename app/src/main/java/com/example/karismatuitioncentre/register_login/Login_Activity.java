@@ -1,4 +1,4 @@
-package com.example.karismatuitioncentre.register_login;
+ package com.example.karismatuitioncentre.register_login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -23,13 +24,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.referencecode.database.models.userInfo;
 
-public class Login_Activity extends AppCompatActivity {
+import java.util.Objects;
+
+ public class Login_Activity extends AppCompatActivity {
     EditText lEmail,lPassword;
     TextView lLoginBtn;
     FirebaseAuth fAuth;
@@ -37,48 +42,6 @@ public class Login_Activity extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListener;
     FirebaseDatabase database= FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference();
-    FirebaseUser user = fAuth.getCurrentUser();
-    String userID = user.getUid();
-
-    public static class userAccess {
-
-        String to_User;
-
-        userAccess() {
-
-        }
-
-        public userAccess(String to_User) {
-            this.to_User = to_User;
-
-        }
-
-        public String getuserAccess() {
-            return to_User;
-        }
-
-        public void setuserAccess(String pengajar) {
-            this.to_User = pengajar;
-        }
-
-
-    }
-/*    mAuthListener = new FirebaseAuth.AuthStateListener() {
-        @Override
-        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-            FirebaseUser user = firebaseAuth.getCurrentUser();
-            if (user != null) {
-                // User is signed in
-                Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                toastMessage("Successfully signed in with: " + user.getEmail());
-            } else {
-                // User is signed out
-                Log.d(TAG, "onAuthStateChanged:signed_out");
-                toastMessage("Successfully signed out.");
-            }
-            // ...
-        }
-    };*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +49,7 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         lEmail = findViewById(R.id.emel_LogMasuk);
-        lPassword = findViewById(R.id.kataLaluan_LogMAsuk);
+        lPassword = findViewById(R.id.kataLaluan_LogMasuk);
         lLoginBtn = findViewById(R.id.btn_LogMasuk);
 
 
@@ -112,43 +75,61 @@ public class Login_Activity extends AppCompatActivity {
 
             progressBar.setVisibility(View.VISIBLE);
 
-            fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+            fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
 
-                    if (task.isSuccessful()) {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    progressBar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(Login_Activity.this, "Log Masuk Berjaya", Toast.LENGTH_SHORT).show();
+
+                    FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+
+                    assert user != null;
+                    String userId=user.getUid();
+
+
+                    ref = FirebaseDatabase.getInstance().getReference("User_list");
+
+                    ref.orderByChild("userid").equalTo(userId).addValueEventListener(new ValueEventListener() {
+
+//                        ValueEventListener postListener = new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            // Get Post object and use the values to update the UI
+//                                userAccess userAccess = dataSnapshot.getValue(userAccess.class);
+
+                            for(DataSnapshot datas: dataSnapshot.getChildren()) {
+                                String userType= (String) datas.child("to_User").getValue();
 
 
 
+                                Toast.makeText(Login_Activity.this, userType, Toast.LENGTH_SHORT).show();
+                                assert userType != null;
+                                switch (userType) {
+                                    case "0":
+                                        startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
+                                        break;
+                                    case "1":
 
-                        ValueEventListener postListener = new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                // Get Post object and use the values to update the UI
-                                userAccess userAccess = dataSnapshot.getValue(userAccess.class);
-                                String userType = dataSnapshot.getRef().toString();
-
-                                if (userType == "0") {
-                                    startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
-                                } else if (userType == "1") {
-                                    startActivity(new Intent(getApplicationContext(), Home_Activity_Pelajar.class));
-                                } else if (userType == "2") {
-                                    startActivity(new Intent(getApplicationContext(), Home_Activity_IbuBapa.class));
+                                        startActivity(new Intent(getApplicationContext(), Home_Activity_Pelajar.class));
+                                        break;
+                                    case "2":
+                                        startActivity(new Intent(getApplicationContext(), Home_Activity_IbuBapa.class));
+                                        break;
                                 }
                             }
+                        }
 
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                            }};
+                        }});
 
-                        } else {
-                        Toast.makeText(Login_Activity.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        progressBar.setVisibility(View.INVISIBLE);
-                    }
+
+
+                    } else {
+                    Toast.makeText(Login_Activity.this, "Error !" + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             });
 

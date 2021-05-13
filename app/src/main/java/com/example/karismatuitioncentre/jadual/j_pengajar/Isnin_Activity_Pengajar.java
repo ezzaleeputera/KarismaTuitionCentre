@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.jadual.Jadual_Model;
-import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,22 +26,17 @@ public class Isnin_Activity_Pengajar extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<Jadual_Model> options= new FirebaseRecyclerOptions
-                .Builder<Jadual_Model>()
+        FirebaseRecyclerOptions<Jadual_Model_Pengajar> options= new FirebaseRecyclerOptions
+                .Builder<Jadual_Model_Pengajar>()
                 .setQuery(FirebaseDatabase.getInstance().getReference()
-                .child("Jadual_Isnin"),Jadual_Model.class).build();
+                .child("Jadual_Isnin"), Jadual_Model_Pengajar.class).build();
 
         adapter= new Isnin_Adapter_Pengajar(options);
         recyclerView.setAdapter(adapter);
 
         fb=(FloatingActionButton)findViewById(R.id.fabAdd);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),
-                        Isnin_AddData_Pengajar.class));
-            }
-        });
+        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),
+                Isnin_AddData_Pengajar.class)));
 
     }
     @Override

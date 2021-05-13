@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/background_home"
+    android:background="@drawable/black_bg"
     tools:context=".home.Home_Activity_Pengajar">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="16dp"
-            android:paddingLeft="16dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+
+            android:paddingBottom="30dp"
             android:orientation="vertical" >
 
             <TextView
@@ -27,8 +28,8 @@
                 android:text="@string/halaman_utama"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="#000000"
-                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
                 android:textStyle="bold|italic" />
 
             <Button
@@ -36,11 +37,14 @@
                 android:layout_width="303dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="40dp"
+                android:backgroundTint="#D031ABE6"
+                android:drawableStart="@drawable/ic_calendar"
                 android:fadingEdge="horizontal|vertical"
                 android:foregroundTint="#FFFFFF"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
                 android:text="@string/jadual"
+                android:textAlignment="center"
                 android:textSize="30sp" />
 
             <Button
@@ -48,6 +52,8 @@
                 android:layout_width="303dp"
                 android:layout_height="112dp"
                 android:layout_marginTop="4dp"
+                android:backgroundTint="#FDD835"
+                android:drawableStart="@drawable/ic_check_circle"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
                 android:text="@string/kehadiran"
@@ -58,9 +64,11 @@
                 android:layout_width="303dp"
                 android:layout_height="112dp"
                 android:layout_marginTop="4dp"
+                android:backgroundTint="#AADF72"
+                android:drawableStart="@drawable/ic_dollar"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
-                android:text="YURAN"
+                android:text="@string/yuran"
                 android:textSize="30sp" />
 
             <Button
@@ -68,9 +76,11 @@
                 android:layout_width="303dp"
                 android:layout_height="112dp"
                 android:layout_marginTop="4dp"
-                android:text="@string/pendaftaran"
+                android:backgroundTint="#D85183"
+                android:drawableStart="@drawable/ic_add_box"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
+                android:text="@string/pendaftaran"
                 android:textSize="30sp" />
 
             <Button
@@ -79,21 +89,25 @@
                 android:layout_height="112dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="0dp"
+                android:backgroundTint="#E67C5B"
+                android:drawableStart="@drawable/ic_chart"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
                 android:text="@string/laporan_prestasi"
                 android:textSize="30sp" />
+
             <Button
                 android:id="@+id/btn_MaklumBalas"
                 android:layout_width="303dp"
                 android:layout_height="112dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="40dp"
+                android:backgroundTint="#FFFFFF"
+                android:drawableStart="@drawable/ic_feedback"
                 android:shadowColor="#000000"
                 android:shadowRadius="2"
                 android:text="@string/maklum_balas"
-                android:textSize="30sp"
-                />
+                android:textSize="30sp" />
         </TableLayout>
     </ScrollView>
 

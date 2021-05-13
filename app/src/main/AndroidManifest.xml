@@ -4,6 +4,7 @@
 <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -21,11 +22,19 @@
 
         </activity>
 
+        <activity android:name=".home.Home_Activity_Pelajar">
+
+        </activity>
+
+        <activity android:name=".home.Home_Activity_IbuBapa">
+
+        </activity>
+
         <activity android:name=".register_login.RegisterStudent_Activity">
 
         </activity>
 
-        <activity android:name=".jadual.Jadual_Activity">
+        <activity android:name=".jadual.j_pengajar.Jadual_Activity_Pengajar">
 
         </activity>
 

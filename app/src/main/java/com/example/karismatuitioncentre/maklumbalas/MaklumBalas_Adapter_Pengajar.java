@@ -18,6 +18,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 
 public class MaklumBalas_Adapter_Pengajar extends FirebaseRecyclerAdapter<MaklumBalas_Model,
         MaklumBalas_Adapter_Pengajar.myviewholder>
@@ -31,30 +33,19 @@ public class MaklumBalas_Adapter_Pengajar extends FirebaseRecyclerAdapter<Maklum
     {
         holder.title.setText(model.getTitle());
         holder.desc.setText(model.getDesc());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.title.getContext());
-                builder.setTitle("Padam Maklum Balas");
-                builder.setMessage("Anda pasti untuk memadam maklum balas ini?");
+        holder.delete.setOnClickListener(view -> {
+            AlertDialog.Builder builder=new AlertDialog.Builder(holder.title.getContext());
+            builder.setTitle("Padam Maklum Balas");
+            builder.setMessage("Anda pasti untuk memadam maklum balas ini?");
 
-                builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("MaklumBalas_List")
-                                .child(getRef(mbID).getKey()).removeValue();
-                    }
-                });
+            builder.setPositiveButton("Ya", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference().child("MaklumBalas_List")
+                    .child(Objects.requireNonNull(getRef(mbID).getKey())).removeValue());
 
-                builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setNegativeButton("Tidak", (dialogInterface, i) -> {
 
-                    }
-                });
+            });
 
-                builder.show();
-            }
+            builder.show();
         });
 
     }

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_editor_absoluteX="11dp"
+    tools:layout_editor_absoluteY="69dp"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/background_login"
-    tools:context=".register_login.Login_Activity">
+    tools:context=".register_login.RegisterStudent_Activity">
+
 
     <TextView
         android:id="@+id/titlePendaftaranPelajar"
@@ -18,7 +25,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="50"
-        android:text="Pendaftaran-Pelajar"
+        android:text="@string/tajuk_pendaftaran_pelajar"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -35,8 +42,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints=""
-        android:hint="nama penuh"
+
+        android:hint="@string/nama_penuh"
         android:inputType="textPersonName"
         android:selectAllOnFocus="true"
         android:shadowColor="#121111"
@@ -55,7 +62,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints=""
+
         android:hint="@string/emel"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
@@ -75,8 +82,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints=""
-        android:hint="nombor kad pengenalan"
+
+        android:hint="@string/nombor_kad_pengenalan"
         android:imeActionLabel=""
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -98,7 +105,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints=""
+
         android:hint="@string/kata_laluan"
         android:imeActionLabel=""
         android:imeOptions="actionDone"
@@ -131,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Subjek Berdaftar:"
+        android:text="@string/tajuk_daftar_subjek"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -146,16 +153,17 @@
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
-        android:text="Bahasa Melayu"
+        android:text="@string/bahasa_melayu"
         app:layout_constraintEnd_toStartOf="@+id/cb_Bio"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleRegSubjek" />
+        app:layout_constraintTop_toBottomOf="@+id/titleRegSubjek"
+        />
 
     <CheckBox
         android:id="@+id/cb_BI"
         android:layout_width="163dp"
         android:layout_height="49dp"
-        android:text="Bahasa Inggeris"
+        android:text="@string/bahasa_inggeris"
         app:layout_constraintEnd_toStartOf="@+id/cb_Pp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_BM" />
@@ -164,7 +172,7 @@
         android:id="@+id/cb_Mt"
         android:layout_width="163dp"
         android:layout_height="49dp"
-        android:text="Matematik"
+        android:text="@string/matematik"
         app:layout_constraintEnd_toStartOf="@+id/cb_Sai"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
@@ -174,7 +182,7 @@
         android:id="@+id/cb_AMt"
         android:layout_width="163dp"
         android:layout_height="49dp"
-        android:text="Matematik Tambahan"
+        android:text="@string/matematik_tambahan"
         app:layout_constraintEnd_toStartOf="@+id/cb_Kim"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,7 +192,7 @@
         android:id="@+id/cb_Phy"
         android:layout_width="163dp"
         android:layout_height="49dp"
-        android:text="Fizik"
+        android:text="@string/fizik"
         app:layout_constraintEnd_toStartOf="@+id/cb_BC"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_AMt" />
@@ -195,7 +203,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:text="Biologi"
+        android:text="@string/biologi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleRegSubjek" />
 
@@ -204,7 +212,7 @@
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginEnd="24dp"
-        android:text="Prinsip Perakaunan"
+        android:text="@string/prinsip_perakaunan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_Bio" />
 
@@ -213,7 +221,7 @@
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginEnd="24dp"
-        android:text="Sains"
+        android:text="@string/sains"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_Pp" />
 
@@ -222,7 +230,7 @@
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginEnd="24dp"
-        android:text="Kimia"
+        android:text="@string/kimia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_Sai" />
 
@@ -231,7 +239,7 @@
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginEnd="24dp"
-        android:text="Bahasa Cina"
+        android:text="@string/bahasa_cina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_Kim" />
 
@@ -250,16 +258,10 @@
         app:layout_constraintTop_toBottomOf="@+id/cb_BC"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="69dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

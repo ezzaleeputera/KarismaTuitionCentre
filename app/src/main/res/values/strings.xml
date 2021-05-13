@@ -11,7 +11,7 @@
     <string name="maklum_balas">Maklum Balas</string>
     <string name="laporan_prestasi">LAPORAN PRESTASI</string>
     <string name="halaman_utama">HALAMAN UTAMA</string>
-    <string name="yuran">YURAN</string>
+
     <string name="jumaat">Jumaat</string>
     <string name="khamis">Khamis</string>
     <string name="rabu">Rabu</string>
@@ -20,4 +20,21 @@
     <string name="seterusnya">Seterusnya</string>
     <string name="nama">Nama</string>
     <string name="tambah_maklum_balas">Tambah Maklum Balas</string>
+    <string name="bahasa_melayu">Bahasa Melayu</string>
+    <string name="bahasa_inggeris">Bahasa Inggeris</string>
+    <string name="matematik">Matematik</string>
+    <string name="matematik_tambahan">Matematik Tambahan</string>
+    <string name="fizik">Fizik</string>
+    <string name="biologi">Biologi</string>
+    <string name="prinsip_perakaunan">Prinsip Perakaunan</string>
+    <string name="sains">Sains</string>
+    <string name="kimia">Kimia</string>
+    <string name="bahasa_cina">Bahasa Cina</string>
+    <string name="tajuk_daftar_subjek">Subjek Berdaftar:</string>
+    <string name="tajuk_pendaftaran_pelajar">Pendaftaran-Pelajar</string>
+    <string name="tajuk_pendaftaran_ibubapa">Pendaftaran-Ibu Bapa</string>
+    <string name="nombor_kad_pengenalan">nombor kad pengenalan</string>
+    <string name="nama_penuh">nama penuh</string>
+    <string name="yuran">YURAN</string>
+
 </resources>

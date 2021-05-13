@@ -1,4 +1,4 @@
-package com.example.karismatuitioncentre.jadual;
+package com.example.karismatuitioncentre.jadual.j_pelajaribubapa;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,10 @@ import com.example.karismatuitioncentre.jadual.j_pengajar.Rabu_Activity_Pengajar
 import com.example.karismatuitioncentre.jadual.j_pengajar.Sabtu_Activity_Pengajar;
 import com.example.karismatuitioncentre.jadual.j_pengajar.Selasa_Activity_Pengajar;
 
+public class Jadual_Activity_Pelajar extends AppCompatActivity {
 
-public class Jadual_Activity extends AppCompatActivity {
-TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
+
+    TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -31,26 +32,12 @@ TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
         btnSabtu=findViewById(R.id.btn_Sabtu);
         btnAhad=findViewById(R.id.btn_Ahad);
 
-        btnIsnin.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Isnin_Activity_Pengajar.class));
-        });
-        btnSelasa.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Selasa_Activity_Pengajar.class));
-        });
-        btnRabu.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Rabu_Activity_Pengajar.class));
-        });
-        btnKhamis.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Khamis_Activity_Pengajar.class));
-        });
-        btnJumaat.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Jumaat_Activity_Pengajar.class));
-        });
-        btnSabtu.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Sabtu_Activity_Pengajar.class));
-        });
-        btnAhad.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), Ahad_Activity_Pengajar.class));
-        });
+        btnIsnin.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Isnin_Activity_Pelajar_IbuBapa.class)));
+        btnSelasa.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Selasa_Activity_Pelajar_IbuBapa.class)));
+        btnRabu.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Rabu_Activity_Pelajar_IbuBapa.class)));
+        btnKhamis.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Khamis_Activity_Pelajar_IbuBapa.class)));
+        btnJumaat.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Jumaat_Activity_Pelajar_IbuBapa.class)));
+        btnSabtu.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Sabtu_Activity_Pelajar_IbuBapa.class)));
+        btnAhad.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Ahad_Activity_Pelajar_IbuBapa.class)));
     }
 }
