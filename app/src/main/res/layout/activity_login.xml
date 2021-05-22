@@ -30,33 +30,18 @@
 
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="133dp"
-        android:layout_height="125dp"
+        android:layout_width="159dp"
+        android:layout_height="147dp"
         android:layout_marginTop="32dp"
         android:backgroundTintMode="screen"
         android:contentDescription="@string/logo"
         android:rotation="-12"
         android:rotationX="15"
         android:rotationY="28"
+        android:src="@drawable/karismalogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLogMasuk"
-        android:src="@drawable/karismalogo" />
-
-    <EditText
-        android:id="@+id/emel_LogMasuk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
-        android:autofillHints="email"
-        android:ems="10"
-        android:hint="@string/emel"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#DD302323"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titleLogMasuk" />
 
     <!--    <EditText
             android:id="@+id/emel_LogMasuk"
@@ -101,17 +86,31 @@
             app:layout_constraintTop_toBottomOf="@+id/emel_LogMasuk" />-->
 
     <EditText
+        android:id="@+id/emel_LogMasuk"
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="328dp"
+        android:autofillHints="email"
+        android:ems="10"
+        android:hint="@string/emel"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#DD302323"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/kataLaluan_LogMasuk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="323dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
         android:autofillHints="@string/kata_laluan"
         android:ems="10"
         android:hint="@string/kata_laluan"
         android:inputType="textPassword"
         android:textColorHint="#D5291919"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emel_LogMasuk" />
 
@@ -144,7 +143,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.71" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

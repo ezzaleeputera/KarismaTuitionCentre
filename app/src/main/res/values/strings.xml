@@ -36,5 +36,7 @@
     <string name="nombor_kad_pengenalan">nombor kad pengenalan</string>
     <string name="nama_penuh">nama penuh</string>
     <string name="yuran">YURAN</string>
+    <string name="selesai">Selesai</string>
+    <string name="pembayaran_yuran_ibubapa">Pembayaran Yuran- IbuBapa</string>
 
 </resources>

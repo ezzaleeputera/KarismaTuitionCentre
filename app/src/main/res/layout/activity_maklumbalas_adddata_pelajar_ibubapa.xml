@@ -7,7 +7,7 @@ android:layout_height="match_parent"
 android:orientation="vertical"
 android:gravity="center"
 tools:context=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa"
-    android:background="@drawable/innardslogo">
+    android:background="@drawable/autumn_bg">
 
 
     <EditText
@@ -16,40 +16,44 @@ tools:context=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa"
     android:id="@+id/add_title"
     android:textSize="20sp"
     android:hint="Tajuk Maklum Balas"
-    android:layout_marginBottom="15dp"
+    android:layout_marginBottom="10dp"
     android:textColor="#000"/>
 
-<EditText
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
-    android:inputType="textMultiLine"
-    android:gravity="top|left"
-    android:lines="8"
-    android:minLines="6"
-    android:maxLines="10"
-    android:overScrollMode="always"
-    android:scrollbarStyle="insideInset"
-    android:scrollbars="vertical"
-    android:id="@+id/add_desc"
-    android:textSize="20sp"
-    android:hint="Maklum Balas"
-    android:layout_marginBottom="15dp"
-    android:textColor="#000"/>
+    <EditText
+        android:id="@+id/add_desc"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="#000000"
+        android:foregroundTint="#390A0A"
+        android:gravity="top|left"
+        android:hint="Maklum Balas"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:textColor="#000"
+        android:textSize="20sp" />
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp"
-    android:id="@+id/add_submit"
-    android:textSize="20sp"
-    android:text="Hantar"/>
+    <Button
+        android:id="@+id/add_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#DABBBB"
+        android:text="Hantar"
+        android:textSize="20sp" />
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/add_back"
-    android:textSize="20sp"
-    android:text="Kembali"/>
+    <Button
+        android:id="@+id/add_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B6A2A2"
+        android:text="Kembali"
+        android:textSize="20sp" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
