@@ -11,49 +11,54 @@
 
 
     <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
         android:id="@+id/add_subjek"
-        android:textSize="20sp"
-        android:hint="Nama Subjek"
-        android:inputType="text"
-        android:layout_marginBottom="15dp"
-        android:textColor="#000"/>
-
-    <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="Nama Subjek"
+        android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp" />
+
+    <EditText
         android:id="@+id/add_pengajar"
-        android:textSize="20sp"
-        android:inputType="text"
-        android:hint="Nama Subjek"
-        android:layout_marginBottom="15dp"
-        android:textColor="#000"/>
-
-    <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/add_masa"
+        android:layout_marginBottom="15dp"
+        android:hint="Nama Pengajar"
         android:inputType="text"
-        android:textSize="20sp"
+        android:textColor="#000"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/add_masa"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:hint="Waktu Kelas: cth.7am-8am"
-        android:layout_marginBottom="15dp"/>
+        android:inputType="text"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp" />
 
 
     <Button
+        android:id="@+id/add_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:id="@+id/add_submit"
-        android:textSize="20sp"
-        android:text="Hantar"/>
+        android:background="#C8D779E1"
+        android:text="Hantar"
+        android:textSize="20sp" />
 
     <Button
+        android:id="@+id/add_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/add_back"
-        android:textSize="20sp"
-        android:text="Kembali"/>
+        android:background="#F12A2A"
+        android:text="Kembali"
+        android:textSize="20sp" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

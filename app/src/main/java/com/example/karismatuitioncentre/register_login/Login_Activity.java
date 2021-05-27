@@ -91,11 +91,10 @@ import java.util.Objects;
 
                     ref.orderByChild("userid").equalTo(userId).addValueEventListener(new ValueEventListener() {
 
-//                        ValueEventListener postListener = new ValueEventListener() {
+
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            // Get Post object and use the values to update the UI
-//                                userAccess userAccess = dataSnapshot.getValue(userAccess.class);
+
 
                             for(DataSnapshot datas: dataSnapshot.getChildren()) {
                                 String userType= (String) datas.child("to_User").getValue();

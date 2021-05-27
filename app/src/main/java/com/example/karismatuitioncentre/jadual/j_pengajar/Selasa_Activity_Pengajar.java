@@ -24,18 +24,18 @@ public class Selasa_Activity_Pengajar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hari_pengajar);
 
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<Jadual_Model_Pengajar> options= new FirebaseRecyclerOptions
                 .Builder<Jadual_Model_Pengajar>()
                 .setQuery(FirebaseDatabase.getInstance().getReference()
-                        .child("Jadual Selasa"), Jadual_Model_Pengajar.class).build();
+                        .child("Jadual_Selasa"), Jadual_Model_Pengajar.class).build();
 
         adapter= new Selasa_Adapter_Pengajar(options);
         recyclerView.setAdapter(adapter);
 
-        fb=(FloatingActionButton)findViewById(R.id.fabAdd);
+        fb= findViewById(R.id.fabAdd);
         fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),
                 Selasa_AddData_Pengajar.class)));
 

@@ -23,7 +23,7 @@ public class MaklumBalas_Activity_Pelajar_IbuBapa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maklumbalas_pelajar_ibubapa);
 
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MaklumBalas_Model> options= new FirebaseRecyclerOptions
@@ -34,14 +34,9 @@ public class MaklumBalas_Activity_Pelajar_IbuBapa extends AppCompatActivity {
         adapter= new MaklumBalas_Adapter_Pelajar_IbuBapa(options);
         recyclerView.setAdapter(adapter);
 
-        fb=(FloatingActionButton)findViewById(R.id.fabAdd);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),
-                        MaklumBalas_AddData_Pelajar_IbuBapa.class));
-            }
-        });
+        fb= findViewById(R.id.fabAdd);
+        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),
+                MaklumBalas_AddData_Pelajar_IbuBapa.class)));
 
     }
     @Override

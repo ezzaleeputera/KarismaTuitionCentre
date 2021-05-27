@@ -34,28 +34,20 @@ public class Rabu_AddData_Pengajar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hari_adddata_pengajar);
 
-        subjek=(EditText)findViewById(R.id.add_subjek);
-        pengajar=(EditText)findViewById(R.id.add_pengajar);
-        masa=(EditText)findViewById(R.id.add_masa);
+        subjek= findViewById(R.id.add_subjek);
+        pengajar= findViewById(R.id.add_pengajar);
+        masa= findViewById(R.id.add_masa);
 
 
-        back=(Button)findViewById(R.id.add_back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),
-                        Rabu_Activity_Pengajar.class));
-                finish();
-            }
+        back= findViewById(R.id.add_back);
+        back.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(),
+                    Rabu_Activity_Pengajar.class));
+            finish();
         });
 
-        submit=(Button)findViewById(R.id.add_submit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                processinsert();
-            }
-        });
+        submit= findViewById(R.id.add_submit);
+        submit.setOnClickListener(view -> processinsert());
     }
 
     private void processinsert()
@@ -67,23 +59,14 @@ public class Rabu_AddData_Pengajar extends AppCompatActivity {
 
         FirebaseDatabase.getInstance().getReference().child("Jadual_Rabu").push()
                 .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        subjek.setText("");
-                        pengajar.setText("");
-                        masa.setText("");
+                .addOnSuccessListener(aVoid -> {
+                    subjek.setText("");
+                    pengajar.setText("");
+                    masa.setText("");
 
-                        Toast.makeText(getApplicationContext(),"Penambahan berjaya",Toast.LENGTH_LONG).show();
-                    }
+                    Toast.makeText(getApplicationContext(),"Penambahan berjaya",Toast.LENGTH_LONG).show();
                 })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e)
-                    {
-                        Toast.makeText(getApplicationContext(),"Tidak Berjaya",Toast.LENGTH_LONG).show();
-                    }
-                });
+                .addOnFailureListener(e -> Toast.makeText(getApplicationContext(),"Tidak Berjaya",Toast.LENGTH_LONG).show());
 
     }
 }

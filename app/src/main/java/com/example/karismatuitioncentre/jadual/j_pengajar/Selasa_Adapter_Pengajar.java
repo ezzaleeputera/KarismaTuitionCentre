@@ -71,10 +71,10 @@ public class Selasa_Adapter_Pengajar extends FirebaseRecyclerAdapter<Jadual_Mode
         {
             super(itemView);
 
-            subjek=(TextView)itemView.findViewById(R.id.textView_jSubjek);
-            pengajar=(TextView)itemView.findViewById(R.id.textView_jPengajar);
-            masa=(TextView)itemView.findViewById(R.id.textView_jMasa);
-            delete=(ImageView)itemView.findViewById(R.id.deleteicon);
+            subjek= itemView.findViewById(R.id.textView_jSubjek);
+            pengajar= itemView.findViewById(R.id.textView_jPengajar);
+            masa= itemView.findViewById(R.id.textView_jMasa);
+            delete= itemView.findViewById(R.id.deleteicon);
         }
     }
 }

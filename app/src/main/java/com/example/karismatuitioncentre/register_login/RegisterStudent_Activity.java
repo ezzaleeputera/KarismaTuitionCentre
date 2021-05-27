@@ -192,7 +192,10 @@ public class RegisterStudent_Activity extends AppCompatActivity {
 
                     //Student Fee Mapping
                     Map<String, Object> fee = new HashMap<>();
-                    user.put("userid", userID);
+                    fee.put("userid", userID);
+                    fee.put("nama", namaP);
+                    fee.put("email", emailP);
+                    fee.put("kp", kpP);
                     fee.put("JanFee", JanFee);
                     fee.put("FebFee", FebFee);
                     fee.put("MarFee", MarFee);
@@ -214,6 +217,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbBMStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -227,6 +233,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbBIStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -240,6 +249,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbMtStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -253,6 +265,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbAMtStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -266,6 +281,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbPhyStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -279,6 +297,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbBioStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -292,6 +313,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbPpStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -305,6 +329,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbSaiStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -318,6 +345,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbKimStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);
@@ -331,6 +361,9 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                     if(cbBCStatus[0].equals("1")) {
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
+                        subject.put("nama", namaP);
+                        subject.put("email", emailP);
+                        subject.put("kp", kpP);
                         subject.put("QuizGradePast", QuizGradePast);
                         subject.put("TestGradePast", TestGradePast);
                         subject.put("QuizGradeLatest", QuizGradeLatest);

@@ -15,6 +15,8 @@ import com.example.karismatuitioncentre.jadual.j_pengajar.Rabu_Activity_Pengajar
 import com.example.karismatuitioncentre.jadual.j_pengajar.Sabtu_Activity_Pengajar;
 import com.example.karismatuitioncentre.jadual.j_pengajar.Selasa_Activity_Pengajar;
 
+import java.util.Objects;
+
 
 public class Jadual_Activity_Pengajar extends AppCompatActivity {
 TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
@@ -22,7 +24,7 @@ TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadual);
-
+    Objects.requireNonNull(getSupportActionBar()).hide();
         btnIsnin=findViewById(R.id.btn_Isnin);
         btnSelasa=findViewById(R.id.btn_Selasa);
         btnRabu=findViewById(R.id.btn_Rabu);
