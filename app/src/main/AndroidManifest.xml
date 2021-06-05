@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KarismaTuitionCentre">
-        <activity android:name=".register_login.Login_Activity">
+        <activity android:name=".register_login.login.Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +31,11 @@
 
         </activity>
 
-        <activity android:name=".register_login.RegisterStudent_Activity">
+        <activity android:name=".register_login.register.RegisterStudent_Activity_Pengajar">
+
+        </activity>
+
+        <activity android:name=".register_login.register.RegisterIbuBapa_Activity_Pengajar">
 
         </activity>
 
@@ -108,16 +112,25 @@
 
         </activity>
 
-        <activity android:name=".yuran.Yuran_Activity_IbuBapa">
+
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_Pengajar">
+
+        </activity>
+        <activity android:name=".yuran.y_pengajar.Yuran_ViewActivity_Pengajar">
+
+        </activity>
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_IbuBapa_Test">
 
         </activity>
 
-        <activity android:name=".yuran.Yuran_Activity_Test">
+                <activity android:name=".yuran.y_pengajar.Yuran_Home_Pengajar">
 
         </activity>
-        <activity android:name=".yuran.Yuran_Activity_Pengajar">
+              <activity android:name=".yuran.y_pengajar.Yuran_SetMaklumatYuran_Pengajar">
 
         </activity>
+
+
     </application>
 
 </manifest>

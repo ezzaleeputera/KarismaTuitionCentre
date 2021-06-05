@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/green_bg"
-android:layout_width="match_parent"
+    android:background="@drawable/three_tone_bg"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
 
     <TextView
@@ -20,86 +21,105 @@ android:layout_width="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.088" />
 
-    <TextView
-        android:id="@+id/tvNamaBank"
-        android:layout_width="123dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="160dp"
-        android:text="Nama Bank :"
+    <EditText
+        android:id="@+id/namaPembayar"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Nama Pembayar [ cth: Dol Said]"
+        android:inputType="textPersonName"
         android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvNamaPemilikAkaun"
-        android:layout_width="125dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="68dp"
-        android:text="Nama Pemilik Akaun :"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamaBank" />
-
-    <TextView
-        android:id="@+id/tvNomborAkaunBank"
-        android:layout_width="131dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:text="No. Akaun Bank :"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamaPemilikAkaun" />
-
-    <TextView
-        android:id="@+id/tvNB"
-        android:layout_width="193dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="160dp"
-        android:background="#43A047"
-        android:paddingStart="10dp"
-        android:text="Nama Bank "
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColorHint="#BC090707"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toEndOf="@+id/tvNamaBank"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/namaBank"
+        android:layout_width="305dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Nama Bank [ cth: Maybank]"
+        android:inputType="textPersonName"
+        android:textColorHint="#BC090707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaPembayar" />
+
+    <EditText
+        android:id="@+id/jumlahPembayaran"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Jumlah [ cth: RM50]"
+        android:inputType="textPersonName"
+        android:textColorHint="#BC090707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaBank" />
+
+    <EditText
+        android:id="@+id/tarikhPembayaran"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Tarikh [cth: 01/01/2021]"
+        android:inputType="date"
+        android:textColorHint="#BC090707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jumlahPembayaran" />
+
+    <Button
+        android:id="@+id/btn_buktiPembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFD61F"
+        android:drawableStart="@drawable/ic_insert_photo"
+        android:text="Muatnaik Bukti"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUploadURL"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <EditText
+        android:id="@+id/etUploadURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00897B"
+        android:ems="10"
+        android:hint="Pilihan Bukti Pembayaran (pdf)"
+        android:inputType="textPersonName"
+        android:shadowColor="#7BFA81"
+        android:shadowRadius="10"
+        android:textColorHint="#276A0E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/tvNPA"
-        android:layout_width="193dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="24dp"
-        android:background="#43A047"
-        android:paddingStart="10dp"
-        android:text="Nama Pemilik Akaun"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Tekan untuk memilih:"
+        android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvNamaPemilikAkaun"
-        app:layout_constraintTop_toBottomOf="@+id/tvNB" />
-
-    <TextView
-        android:id="@+id/tvNAB"
-        android:layout_width="193dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="20dp"
-        android:background="#43A047"
-        android:paddingStart="10dp"
-        android:text="No. Akaun Bank"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toEndOf="@+id/tvNomborAkaunBank"
-        app:layout_constraintTop_toBottomOf="@+id/tvNPA" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarikhPembayaran" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

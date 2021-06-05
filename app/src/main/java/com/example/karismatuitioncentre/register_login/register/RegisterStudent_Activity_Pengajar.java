@@ -1,4 +1,4 @@
-package com.example.karismatuitioncentre.register_login;
+package com.example.karismatuitioncentre.register_login.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,11 +24,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class RegisterStudent_Activity extends AppCompatActivity {
+public class RegisterStudent_Activity_Pengajar extends AppCompatActivity {
 
     EditText emel_regP,nama_regP,noKP_regP,kl_regP;
     CheckBox cbBM,cbBI,cbMt,cbAMt,cbPhy,cbBio,cbPp,cbSai,cbKim,cbBC;
-    TextView btn_reg;
+    TextView btn_regP;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
 
@@ -38,11 +38,14 @@ public class RegisterStudent_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_pelajar);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Pendaftaran");
+        getSupportActionBar().setSubtitle("Isi maklumat pelajar dan IbuBapa");
 
         emel_regP = findViewById(R.id.emel_regP);
         nama_regP = findViewById(R.id.nama_regP);
         noKP_regP = findViewById(R.id.noKP_regP);
         kl_regP = findViewById(R.id.kl_regP);
+
 
         cbBM= findViewById(R.id.cb_BM);
         cbBI= findViewById(R.id.cb_BI);
@@ -54,7 +57,7 @@ public class RegisterStudent_Activity extends AppCompatActivity {
         cbSai= findViewById(R.id.cb_Sai);
         cbKim= findViewById(R.id.cb_Kim);
         cbBC= findViewById(R.id.cb_BC);
-        btn_reg = findViewById(R.id.btn_reg);
+        btn_regP = findViewById(R.id.btn_regP);
 
         //Values of subject
         final String[] cbBMStatus = {"0"},cbBIStatus = {"0"},cbMtStatus = {"0"},cbAMtStatus = {"0"},cbPhyStatus = {"0"},cbBioStatus = {"0"},cbPpStatus = {"0"},cbSaiStatus = {"0"},cbKimStatus = {"0"},cbBCStatus = {"0"};
@@ -63,11 +66,7 @@ public class RegisterStudent_Activity extends AppCompatActivity {
         String QuizGradePast="Empty",QuizGradeLatest="Empty",TestGradePast="Empty",TestGradeLatest="Empty",TeacherStatement="Empty";
 
         //Values of Fee
-        String JanFee="0",FebFee="0",MarFee="0",AprFee="0",MayFee="0",JunFee="0",JulFee="0",AugFee="0",SepFee="0",OctFee="0",NovFee="0",DecFee="0";
-
-
-
-
+        String JanFee="Unpaid",FebFee="Unpaid",MarFee="Unpaid",AprFee="Unpaid",MayFee="Unpaid",JunFee="Unpaid",JulFee="Unpaid",AugFee="Unpaid",SepFee="Unpaid",OctFee="Unpaid",NovFee="Unpaid",DecFee="Unpaid";
 
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
@@ -123,19 +122,20 @@ public class RegisterStudent_Activity extends AppCompatActivity {
         });
 
 
-        btn_reg.setOnClickListener(view -> {
+        btn_regP.setOnClickListener(view -> {
 
 
             String emailP = emel_regP.getText().toString().trim();
             String namaP = nama_regP.getText().toString().trim();
             String kpP = noKP_regP.getText().toString().trim();
             String klP = kl_regP.getText().toString().trim();
-            String eP = "empty";
-            String idP = "empty";
-            String toUser = "1";// 1 refer to student
 
 
             if (TextUtils.isEmpty(emailP)) {
+                emel_regP.setError("Emel Diperlukan");
+
+                return;
+            }            if (TextUtils.isEmpty(emailP)) {
                 emel_regP.setError("Emel Diperlukan");
 
                 return;
@@ -155,6 +155,10 @@ public class RegisterStudent_Activity extends AppCompatActivity {
 
                 return;
             }
+            if (kpP.length() < 12) {
+                noKP_regP.setError("Kad Pengenalan perlu >= 6 aksara");
+                return;
+            }
             if (klP.length() < 6) {
                 kl_regP.setError("Kata Laluan perlu >= 6 aksara");
                 return;
@@ -167,7 +171,7 @@ public class RegisterStudent_Activity extends AppCompatActivity {
 
                 if (task.isSuccessful()) {
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(RegisterStudent_Activity.this, "Berjaya didaftarkan", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterStudent_Activity_Pengajar.this, "Berjaya didaftarkan", Toast.LENGTH_SHORT).show();
 
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
@@ -175,43 +179,30 @@ public class RegisterStudent_Activity extends AppCompatActivity {
 
 
 
-                    //Student Info Mapping
-                    Map<String, Object> user = new HashMap<>();
-                    user.put("email", emailP);
-                    user.put("nama", namaP);
-                    user.put("kp", kpP);
-                    user.put("kl", klP);
-                    user.put("email_Parent", eP);
-                    user.put("Parent_ID", idP);
-                    user.put("to_User", toUser);
-                    user.put("userid", userID);
+                    //User (Student) Info Mapping
+                    Map<String, Object> userP = new HashMap<>();
+                    userP.put("to_User", "1");  // to_user "1" refer to student
+                    userP.put("userid", userID);
+                    userP.put("email", emailP);
                     ref.child("User_list").push()
-                            .setValue(user)
+                            .setValue(userP)
                             .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat pelajar berjaya", Toast.LENGTH_LONG).show())
                             .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
 
-                    //Student Fee Mapping
-                    Map<String, Object> fee = new HashMap<>();
-                    fee.put("userid", userID);
-                    fee.put("nama", namaP);
-                    fee.put("email", emailP);
-                    fee.put("kp", kpP);
-                    fee.put("JanFee", JanFee);
-                    fee.put("FebFee", FebFee);
-                    fee.put("MarFee", MarFee);
-                    fee.put("AprFee", AprFee);
-                    fee.put("MayFee", MayFee);
-                    fee.put("JunFee", JunFee);
-                    fee.put("JulFee", JulFee);
-                    fee.put("AugFee", AugFee);
-                    fee.put("SepFee", SepFee);
-                    fee.put("OctFee", OctFee);
-                    fee.put("NovFee", NovFee);
-                    fee.put("DecFee", DecFee);
-                    ref.child("Stud_Fee").push()
-                            .setValue(fee)
-                            .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+
+                    //Student Specific Info Mapping
+                    Map<String, Object> student = new HashMap<>();
+                    student.put("email", emailP);
+                    student.put("nama", namaP);
+                    student.put("kp", kpP);
+                    student.put("kl", klP);
+                    student.put("to_User", "1");
+                    student.put("userid", userID);
+                    ref.child("Student_list").push()
+                            .setValue(student)
+                            .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat pelajar berjaya", Toast.LENGTH_LONG).show())
                             .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
 
                     //Student Subjects Mapping
                     if(cbBMStatus[0].equals("1")) {
@@ -375,11 +366,37 @@ public class RegisterStudent_Activity extends AppCompatActivity {
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
                     }
 
+                    //Student Fee Mapping
+                    Map<String, Object> fee = new HashMap<>();
+                    fee.put("userid", userID);
+                    fee.put("nama", namaP);
+                    fee.put("email", emailP);
+                    fee.put("kp", kpP);
+                    fee.put("JanFee", JanFee);
+                    fee.put("FebFee", FebFee);
+                    fee.put("MarFee", MarFee);
+                    fee.put("AprFee", AprFee);
+                    fee.put("MayFee", MayFee);
+                    fee.put("JunFee", JunFee);
+                    fee.put("JulFee", JulFee);
+                    fee.put("AugFee", AugFee);
+                    fee.put("SepFee", SepFee);
+                    fee.put("OctFee", OctFee);
+                    fee.put("NovFee", NovFee);
+                    fee.put("DecFee", DecFee);
+                    ref.child("Stud_Fee").push()
+                            .setValue(fee)
+                            .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                            .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
 
-                    startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
+
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), RegisterIbuBapa_Activity_Pengajar.class);
+                    intent.putExtra("studentID_key", userID);
+                    startActivity(intent);
 
                 } else {
-                    Toast.makeText(RegisterStudent_Activity.this, "Error !" + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterStudent_Activity_Pengajar.this, "Error !" + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.INVISIBLE);
                 }
             });

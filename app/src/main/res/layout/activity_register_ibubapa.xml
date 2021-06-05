@@ -12,36 +12,32 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_login">
+        android:background="@drawable/sky_bg">
 
 
         <TextView
-            android:id="@+id/titlePendaftaranIbuBapa"
+            android:id="@+id/titleMakIbuBapa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:shadowColor="#231563"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="50"
-            android:text="@string/tajuk_pendaftaran_ibubapa"
-            android:textAllCaps="true"
+            android:layout_marginTop="16dp"
+            android:text="Maklumat Ibu Bapa:"
+            android:textAllCaps="false"
             android:textColor="#000000"
-            android:textSize="30sp"
+            android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.087"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <EditText
-            android:id="@+id/nama_regP"
+            android:id="@+id/nama_regIB"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
             android:hint="@string/nama_penuh"
             android:inputType="textPersonName"
             android:selectAllOnFocus="true"
@@ -50,18 +46,17 @@
             android:textColor="#000000"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titlePendaftaranIbuBapa" />
+            app:layout_constraintTop_toBottomOf="@+id/titleMakIbuBapa" />
 
         <EditText
-            android:id="@+id/emel_regP"
+            android:id="@+id/emel_regIB"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
             android:hint="@string/emel"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
@@ -72,20 +67,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nama_regP" />
+            app:layout_constraintTop_toBottomOf="@+id/nama_regIB" />
+
 
         <EditText
-            android:id="@+id/noKP_regP"
+            android:id="@+id/noKP_regIB"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
             android:hint="@string/nombor_kad_pengenalan"
             android:imeActionLabel=""
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:selectAllOnFocus="true"
             android:shadowColor="#121111"
             android:shadowRadius="5"
@@ -94,19 +89,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emel_regP" />
+            app:layout_constraintTop_toBottomOf="@+id/emel_regIB" />
 
 
         <EditText
-            android:id="@+id/kl_regP"
+            android:id="@+id/kl_regIB"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
+
             android:hint="@string/kata_laluan"
-            android:imeActionLabel=""
+
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
@@ -117,42 +112,74 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noKP_regP" />
+            app:layout_constraintTop_toBottomOf="@+id/noKP_regIB" />
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/progressBarIB"
             style="?android:attr/progressBarStyle"
             android:layout_width="66dp"
             android:layout_height="67dp"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.889"
+            app:layout_constraintHorizontal_bias="0.881"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.975" />
-
-
+            app:layout_constraintVertical_bias="0.531" />
 
         <Button
-            android:id="@+id/btn_reg"
+            android:id="@+id/btn_regIB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/seterusnya"
+            android:background="#2A6CA6"
+            android:text="@string/selesai"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kl_regP"
-            app:layout_constraintVertical_bias="1.0" />
-
-
-
-
+            app:layout_constraintTop_toBottomOf="@+id/kl_regIB"
+            app:layout_constraintVertical_bias="0.147" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+<!--
+<TextView
+android:id="@+id/testSnapshot2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Maklumat Ibu Bapa:"
+android:textAllCaps="false"
+android:textColor="#000000"
+android:textSize="18sp"
+android:textStyle="bold|italic"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.498"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/testSnapshot1"
+app:layout_constraintVertical_bias="0.251" />
+
+<TextView
+android:id="@+id/testSnapshot1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="100dp"
+android:text="Maklumat Ibu Bapa:"
+android:textAllCaps="false"
+android:textColor="#000000"
+android:textSize="18sp"
+android:textStyle="bold|italic"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.498"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/btn_regIB"
+app:layout_constraintVertical_bias="0.11" />
+-->

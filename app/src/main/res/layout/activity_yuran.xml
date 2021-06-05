@@ -1,125 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/three_tone_bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
 
+    android:background="@drawable/black_bg"
+    >
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pembayaran_yuran_ibubapa"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/namaPembayar"
-        android:layout_width="305dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Nama Pembayar [ cth: Dol Said]"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="#BC090707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/namaBank"
-        android:layout_width="305dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Nama Bank [ cth: Maybank]"
-        android:inputType="textPersonName"
-        android:textColorHint="#BC090707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namaPembayar" />
+        <Button
+            android:id="@+id/btn_VStatusYuran"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="200dp"
 
-    <EditText
-        android:id="@+id/jumlahPembayaran"
-        android:layout_width="305dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Jumlah [ cth: RM50]"
-        android:inputType="textPersonName"
-        android:textColorHint="#BC090707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namaBank" />
+            android:backgroundTint="#1E88E5"
 
-    <EditText
-        android:id="@+id/tarikhPembayaran"
-        android:layout_width="305dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Tarikh [cth: 01/01/2021]"
-        android:inputType="date"
-        android:textColorHint="#BC090707"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jumlahPembayaran" />
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Status Yuran"
+            android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/btn_buktiPembayaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFD61F"
-        android:drawableStart="@drawable/ic_insert_photo"
-        android:text="Muatnaik Bukti"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUploadURL"
-        app:layout_constraintVertical_bias="0.059" />
 
-    <EditText
-        android:id="@+id/etUploadURL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#00897B"
-        android:ems="10"
-        android:hint="Pilihan Bukti Pembayaran (pdf)"
-        android:inputType="textPersonName"
-        android:shadowColor="#7BFA81"
-        android:shadowRadius="10"
-        android:textColorHint="#276A0E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <Button
+            android:id="@+id/btn_VMaklumatYuran"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#00ACC1"
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Tekan untuk memilih:"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tarikhPembayaran" />
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Maklumat Yuran"
+            android:textSize="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </TableLayout>
+</ScrollView>
+

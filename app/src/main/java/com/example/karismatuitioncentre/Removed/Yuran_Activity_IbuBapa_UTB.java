@@ -1,11 +1,10 @@
-package com.example.karismatuitioncentre.yuran;
+/*
+package com.example.karismatuitioncentre.yuran.y_ibubapa;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +23,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -34,7 +30,9 @@ public class Yuran_Activity_IbuBapa extends AppCompatActivity {
     StorageReference storageReference;
     DatabaseReference databaseReference;
     EditText etNamaPembayar,etNamaBank,etJumlah,etTarikh,etUploadURL;
-    Button /*btnSubmit,*/btnUpload;
+    Button */
+/*btnSubmit,*//*
+btnUpload;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -95,10 +93,10 @@ public class Yuran_Activity_IbuBapa extends AppCompatActivity {
                 while (!uriTask.isComplete());
                 Uri uri= uriTask.getResult();
                 assert uri != null;
-                putPdf putPdf =new putPdf(etNamaPembayar.getText().toString(),etNamaBank.getText().toString(),etJumlah.getText().toString(),etTarikh.getText().toString(),uri.toString());
-                databaseReference.child(Objects.requireNonNull(databaseReference.push().getKey())).setValue(putPdf);
-                Toast.makeText(Yuran_Activity_IbuBapa.this, "PDF File: Uploading......", Toast.LENGTH_SHORT).show();
-                progressDialog.dismiss();
+//                putPdf_USEDTOBE putPdf =new putPdf_USEDTOBE(etNamaPembayar.getText().toString(),etNamaBank.getText().toString(),etJumlah.getText().toString(),etTarikh.getText().toString(),uri.toString());
+//                databaseReference.child(Objects.requireNonNull(databaseReference.push().getKey())).setValue(putPdf);
+//                Toast.makeText(Yuran_Activity_IbuBapa.this, "PDF File: Uploading......", Toast.LENGTH_SHORT).show();
+//                progressDialog.dismiss();
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -111,3 +109,4 @@ public class Yuran_Activity_IbuBapa extends AppCompatActivity {
         });
     }
 }
+*/

@@ -10,6 +10,7 @@ import com.example.karismatuitioncentre.R;
 import com.example.karismatuitioncentre.jadual.j_pelajaribubapa.Jadual_Activity_Pelajar;
 import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_Activity_Pengajar;
 import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa;
+import com.example.karismatuitioncentre.yuran.y_ibubapa.Yuran_Activity_IbuBapa_Test;
 
 public class Home_Activity_IbuBapa extends AppCompatActivity {
     TextView btnJadual,/* btnKehadiran,*/ btnYuran, /*btnPendaftaran,*/ btnLporanPrestasi, btnMaklumBalas;
@@ -29,7 +30,7 @@ public class Home_Activity_IbuBapa extends AppCompatActivity {
 
         btnJadual.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Jadual_Activity_Pelajar.class)));
 //        btnKehadiran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
-        btnYuran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
+        btnYuran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Yuran_Activity_IbuBapa_Test.class)));
 //        btnPendaftaran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
         btnLporanPrestasi.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
         btnMaklumBalas.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MaklumBalas_Activity_Pelajar_IbuBapa.class)));

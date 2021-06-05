@@ -38,5 +38,8 @@
     <string name="yuran">YURAN</string>
     <string name="selesai">Selesai</string>
     <string name="pembayaran_yuran_ibubapa">Pembayaran Yuran- IbuBapa</string>
+    <string name="search_button">Search Button</string>
+    <string name="carian_nama_pelajar">Carian nama pelajar...</string>
+
 
 </resources>

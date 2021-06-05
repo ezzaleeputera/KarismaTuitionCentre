@@ -7,30 +7,26 @@
     tools:layout_editor_absoluteY="69dp"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background_login"
-    tools:context=".register_login.Login_Activity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sky_bg"
+        tools:context=".register_login.register.RegisterStudent_Activity_Pengajar">
 
         <TextView
-            android:id="@+id/titlePendaftaranPelajar"
+            android:id="@+id/titleMakPelajar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:shadowColor="#231563"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="50"
-            android:text="@string/tajuk_pendaftaran_pelajar"
-            android:textAllCaps="true"
+            android:layout_marginTop="16dp"
+            android:text="Maklumat Pelajar:"
+            android:textAllCaps="false"
             android:textColor="#000000"
-            android:textSize="30sp"
+            android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.087"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,31 +35,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
-            android:hint="nama penuh"
+            android:hint="@string/nama_penuh"
             android:inputType="textPersonName"
-            android:selectAllOnFocus="true"
-            android:shadowColor="#121111"
-            android:shadowRadius="5"
-            android:textColor="#000000"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titlePendaftaranPelajar" />
-
-        <EditText
-            android:id="@+id/emel_regP"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="24dp"
-            android:autofillHints=""
-            android:hint="@string/emel"
-            android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
             android:shadowColor="#121111"
             android:shadowRadius="5"
@@ -72,20 +47,40 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleMakPelajar" />
+
+        <EditText
+            android:id="@+id/emel_regP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+
+            android:hint="@string/emel"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nama_regP" />
+
 
         <EditText
             android:id="@+id/noKP_regP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
-            android:hint="nombor kad pengenalan"
+            android:hint="@string/nombor_kad_pengenalan"
             android:imeActionLabel=""
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
+            android:inputType="textPostalAddress"
             android:selectAllOnFocus="true"
             android:shadowColor="#121111"
             android:shadowRadius="5"
@@ -96,15 +91,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emel_regP" />
 
-
         <EditText
             android:id="@+id/kl_regP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:autofillHints=""
+
             android:hint="@string/kata_laluan"
             android:imeActionLabel=""
             android:imeOptions="actionDone"
@@ -115,29 +109,18 @@
             android:textColor="#000000"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/noKP_regP" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="66dp"
-            android:layout_height="67dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.889"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.975" />
+
 
         <TextView
             android:id="@+id/titleRegSubjek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Subjek Berdaftar:"
+            android:text="@string/tajuk_daftar_subjek"
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -152,7 +135,8 @@
             android:layout_width="163dp"
             android:layout_height="49dp"
             android:layout_marginTop="12dp"
-            android:text="Bahasa Melayu"
+            android:background="#98B7EC"
+            android:text="@string/bahasa_melayu"
             app:layout_constraintEnd_toStartOf="@+id/cb_Bio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleRegSubjek" />
@@ -161,7 +145,8 @@
             android:id="@+id/cb_BI"
             android:layout_width="163dp"
             android:layout_height="49dp"
-            android:text="Bahasa Inggeris"
+            android:background="#98B7EC"
+            android:text="@string/bahasa_inggeris"
             app:layout_constraintEnd_toStartOf="@+id/cb_Pp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_BM" />
@@ -170,7 +155,8 @@
             android:id="@+id/cb_Mt"
             android:layout_width="163dp"
             android:layout_height="49dp"
-            android:text="Matematik"
+            android:background="#98B7EC"
+            android:text="@string/matematik"
             app:layout_constraintEnd_toStartOf="@+id/cb_Sai"
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +166,8 @@
             android:id="@+id/cb_AMt"
             android:layout_width="163dp"
             android:layout_height="49dp"
-            android:text="Matematik Tambahan"
+            android:background="#98B7EC"
+            android:text="@string/matematik_tambahan"
             app:layout_constraintEnd_toStartOf="@+id/cb_Kim"
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +177,8 @@
             android:id="@+id/cb_Phy"
             android:layout_width="163dp"
             android:layout_height="49dp"
-            android:text="Fizik"
+            android:background="#98B7EC"
+            android:text="@string/fizik"
             app:layout_constraintEnd_toStartOf="@+id/cb_BC"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_AMt" />
@@ -201,7 +189,8 @@
             android:layout_height="49dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            android:text="Biologi"
+            android:background="#98B7EC"
+            android:text="@string/biologi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleRegSubjek" />
 
@@ -210,7 +199,8 @@
             android:layout_width="163dp"
             android:layout_height="49dp"
             android:layout_marginEnd="24dp"
-            android:text="Prinsip Perakaunan"
+            android:background="#98B7EC"
+            android:text="@string/prinsip_perakaunan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_Bio" />
 
@@ -219,7 +209,8 @@
             android:layout_width="163dp"
             android:layout_height="49dp"
             android:layout_marginEnd="24dp"
-            android:text="Sains"
+            android:background="#98B7EC"
+            android:text="@string/sains"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_Pp" />
 
@@ -228,7 +219,8 @@
             android:layout_width="163dp"
             android:layout_height="49dp"
             android:layout_marginEnd="24dp"
-            android:text="Kimia"
+            android:background="#98B7EC"
+            android:text="@string/kimia"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_Sai" />
 
@@ -237,29 +229,143 @@
             android:layout_width="163dp"
             android:layout_height="49dp"
             android:layout_marginEnd="24dp"
-            android:text="Bahasa Cina"
+            android:background="#98B7EC"
+            android:text="@string/bahasa_cina"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cb_Kim" />
 
+
+        <TextView
+            android:id="@+id/titleMakIbuBapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Maklumat Ibu Bapa:"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_BC" />
+
+        <EditText
+            android:id="@+id/nama_regIB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+
+            android:hint="@string/nama_penuh"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleMakIbuBapa" />
+
+        <EditText
+            android:id="@+id/emel_regIB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+
+            android:hint="@string/emel"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama_regIB" />
+
+
+        <EditText
+            android:id="@+id/noKP_regIB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+
+            android:hint="@string/nombor_kad_pengenalan"
+            android:imeActionLabel=""
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emel_regIB" />
+
+
+        <EditText
+            android:id="@+id/kl_regIB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+
+            android:hint="@string/kata_laluan"
+
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:shadowColor="#121111"
+            android:shadowRadius="5"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noKP_regIB" />
+
+        <ProgressBar
+            android:id="@+id/progressBarS"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="66dp"
+            android:layout_height="67dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.831"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noKP_regIB"
+            app:layout_constraintVertical_bias="0.673" />
+
         <Button
-            android:id="@+id/btn_reg"
+            android:id="@+id/btn_regS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="48dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/seterusnya"
+            android:background="#2A6CA6"
+            android:text="Selesai"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cb_BC"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/kl_regIB"
+            app:layout_constraintVertical_bias="0.147" />
 
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -8,12 +8,11 @@ import android.widget.TextView;
 
 import com.example.karismatuitioncentre.R;
 import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_Activity_Pengajar;
-import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa;
 import com.example.karismatuitioncentre.maklumbalas.MaklumBalas_Activity_Pengajar;
-import com.example.karismatuitioncentre.register_login.RegisterStudent_Activity;
-import com.example.karismatuitioncentre.yuran.Yuran_Activity_IbuBapa;
-import com.example.karismatuitioncentre.yuran.Yuran_Activity_Pengajar;
-import com.example.karismatuitioncentre.yuran.Yuran_Activity_Test;
+import com.example.karismatuitioncentre.register_login.register.RegisterStudent_Activity_Pengajar;
+import com.example.karismatuitioncentre.yuran.y_pengajar.Yuran_Activity_Pengajar;
+import com.example.karismatuitioncentre.yuran.y_pengajar.Yuran_Home_Pengajar;
+
 
 public class Home_Activity_Pengajar extends AppCompatActivity {
     TextView btnJadual, btnKehadiran, btnYuran, btnPendaftaran, btnLporanPrestasi, btnMaklumBalas;
@@ -33,9 +32,9 @@ public class Home_Activity_Pengajar extends AppCompatActivity {
 
         btnJadual.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Jadual_Activity_Pengajar.class)));
         btnKehadiran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
-        btnYuran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Yuran_Activity_Test.class)));
-        btnPendaftaran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), RegisterStudent_Activity.class)));
-        btnLporanPrestasi.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Yuran_Activity_Pengajar.class)));
+        btnYuran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Yuran_Home_Pengajar.class)));
+        btnPendaftaran.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), RegisterStudent_Activity_Pengajar.class)));
+        btnLporanPrestasi.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class)));
         btnMaklumBalas.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MaklumBalas_Activity_Pengajar.class)));
     }
 }

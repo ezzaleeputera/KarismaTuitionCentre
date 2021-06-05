@@ -1,15 +1,16 @@
-package com.example.karismatuitioncentre.yuran;
+package com.example.karismatuitioncentre.yuran.y_pengajar;
 
-public class Users_Model {
+public class Yuran_Model_Pengajar
+{
     String nama,kp,email;
-
-    Users_Model() {
+    Yuran_Model_Pengajar()
+    {
 
     }
-    public Users_Model(String nama, String kp, String email) {
-        this.nama=nama;
-        this.kp=kp;
-        this.email=email;
+    public Yuran_Model_Pengajar(String nama, String kp, String email) {
+        this.nama = nama;
+        this.kp = kp;
+        this.email = email;
 
     }
 
@@ -25,8 +26,8 @@ public class Users_Model {
         return kp;
     }
 
-    public void setKp(String kl) {
-        this.kp = kl;
+    public void setKp(String kp) {
+        this.kp = kp;
     }
 
     public String getEmail() {

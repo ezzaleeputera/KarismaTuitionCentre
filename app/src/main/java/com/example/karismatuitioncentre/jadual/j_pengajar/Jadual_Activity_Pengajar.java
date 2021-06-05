@@ -24,7 +24,8 @@ TextView btnIsnin, btnSelasa,btnRabu,btnKhamis,btnJumaat,btnSabtu,btnAhad;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadual);
-    Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Jadual");
+        getSupportActionBar().setSubtitle("Tekan untuk melihat atau mengemaskini jadual");
         btnIsnin=findViewById(R.id.btn_Isnin);
         btnSelasa=findViewById(R.id.btn_Selasa);
         btnRabu=findViewById(R.id.btn_Rabu);

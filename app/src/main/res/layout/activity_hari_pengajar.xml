@@ -22,8 +22,10 @@
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#8A6DF3"
+        android:backgroundTint="#042D51"
         android:clickable="true"
+        android:contentDescription="@string/tambah_maklum_balas"
+        android:focusable="true"
         android:foregroundTint="#130040"
         app:backgroundTint="#BA8BF3"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
@@ -32,8 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        android:contentDescription="@string/tambah_maklum_balas"
-        android:focusable="true" />
+        app:srcCompat="@drawable/ic_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

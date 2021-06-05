@@ -68,9 +68,9 @@ public class MaklumBalas_Adapter_Pengajar extends FirebaseRecyclerAdapter<Maklum
         {
             super(itemView);
 
-            title=(TextView)itemView.findViewById(R.id.textView_mbTitle);
-            desc=(TextView)itemView.findViewById(R.id.textView_mbDesc);
-            delete=(ImageView)itemView.findViewById(R.id.deleteicon);
+            title= itemView.findViewById(R.id.textView_mbTitle);
+            desc= itemView.findViewById(R.id.textView_mbDesc);
+            delete= itemView.findViewById(R.id.deleteicon);
         }
     }
 }

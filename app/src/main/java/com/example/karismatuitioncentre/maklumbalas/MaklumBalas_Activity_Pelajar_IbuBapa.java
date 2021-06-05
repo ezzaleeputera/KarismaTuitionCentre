@@ -39,7 +39,7 @@ public class MaklumBalas_Activity_Pelajar_IbuBapa extends AppCompatActivity {
                 MaklumBalas_AddData_Pelajar_IbuBapa.class)));
 
     }
-    @Override
+   /* @Override
     protected void onStart(){
         super.onStart();
         adapter.startListening();
@@ -49,5 +49,5 @@ public class MaklumBalas_Activity_Pelajar_IbuBapa extends AppCompatActivity {
 
         super.onStop();
         adapter.stopListening();
-    }
+    }*/
 }
