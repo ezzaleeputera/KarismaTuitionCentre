@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/yellow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvChooseSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Subjek:"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_teachersName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Nama Pengajar:"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNamaSubjekAttendance" />
+
+        <EditText
+            android:id="@+id/etNamaPengajar"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Masukkan Nama Pengajar..."
+            android:inputType="textPersonName"
+            android:textColorHint="#C8000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_teachersName"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/tvStarting_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Waktu Kelas Bermula:"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNamaPengajar" />
+
+        <TextView
+            android:id="@+id/tvEnding_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Waktu Kelas Tamat:"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMasa_Start" />
+
+        <TextView
+            android:id="@+id/tvMasa_Start"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#4BA8E697"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:hint="Tetapkan Waktu Kelas Bermula"
+            android:textColorHint="#C8000000"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:drawableTopCompat="@drawable/ic_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStarting_Time" />
+
+        <TextView
+            android:id="@+id/tvMasa_End"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#68CDB1B0"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:hint="Tetapkan Waktu Kelas Tamat"
+            android:textColorHint="#C8000000"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:drawableTopCompat="@drawable/ic_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnding_Time" />
+
+        <Button
+            android:id="@+id/btn_createAttendance"
+            android:layout_width="307dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/borders"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/seterusnya"
+            android:textAllCaps="true"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMasa_End"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/etNamaSubjekAttendance"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Masukkan Nama Subjek..."
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#C8000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChooseSubject" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

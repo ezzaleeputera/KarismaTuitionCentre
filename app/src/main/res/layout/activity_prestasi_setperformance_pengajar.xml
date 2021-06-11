@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/orange_marble">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="400dp"
+            android:background="@drawable/yellowbox"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".maklumbalas.mb_pelajaribubapa.MaklumBalas_AddData_Pelajar_IbuBapa">
+
+            <TextView
+                android:id="@+id/tvRumusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingStart="40dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="20dp"
+                android:text="Ruang Hantar Rumusan Prestasi Terkini Pelajar"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#090909"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/add_titleR"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/boxwhite"
+                android:hint="Berikan Tajuk Rumusan"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/add_descR"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/boxwhite"
+                android:gravity="top|start"
+                android:hint="Berikan Rumusan Terkini Pelajar. cth:(Sikap/ Tips)"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:overScrollMode="always"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_Send"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:width="200dp"
+                android:background="@drawable/buttonprestasi"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="Hantar"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellowbox"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+            <TextView
+                android:id="@+id/tvMarkahUjian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingStart="40dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="20dp"
+                android:text="Ruang Isi Markah Ujian Terkini Pelajar"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#090909"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/add_testM"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/boxwhite"
+                android:hint="Berikan Markah Ujian Pelajar (1-100)"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_Send2"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:width="200dp"
+                android:background="@drawable/buttonprestasi"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="Hantar"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

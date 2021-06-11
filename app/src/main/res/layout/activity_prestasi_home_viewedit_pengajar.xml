@@ -1,0 +1,44 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/yellow_light">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical" >
+
+
+        <Button
+            android:id="@+id/btn_ViewPerformance"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="200dp"
+
+            android:backgroundTint="#D66541"
+
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Lihat Prestasi"
+            android:textSize="30sp" />
+
+
+        <Button
+            android:id="@+id/btn_EditPerformance"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#953011"
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Tambah Prestasi"
+            android:textSize="30sp" />
+
+    </TableLayout>
+</ScrollView>
+

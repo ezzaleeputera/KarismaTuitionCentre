@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_sky"
+    android:visibility="visible">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Button
+            android:id="@+id/btn_Isnin"
+            android:layout_width="303dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#CCFF41E6"
+            android:fadingEdge="none"
+            android:foregroundTint="#000000"
+            android:foregroundTintMode="multiply"
+            android:scrollbarSize="11dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="Isnin"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Selasa"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#CC48BBFB"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="@string/selasa"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Rabu"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#CCFDD835"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="@string/rabu"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Khamis"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#CCA2F34D"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="@string/khamis"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Jumaat"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#D96C80F6"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="@string/jumaat"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Sabtu"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#CCFD7673"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="Sabtu"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_Ahad"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#CC6BFAEB"
+            android:fadingEdge="horizontal|vertical"
+            android:foregroundTint="#042DFB"
+            android:shadowColor="#000000"
+            android:shadowRadius="30"
+            android:text="Ahad"
+            android:textSize="30sp" />
+    </TableLayout>
+</ScrollView>
+
+<!--<TextView-->
+<!--android:id="@+id/titleJadual"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="10dp"-->
+<!--android:layout_marginEnd="20dp"-->
+<!--android:shadowColor="#FFFFFF"-->
+<!--android:shadowDx="0"-->
+<!--android:shadowDy="0"-->
+<!--android:shadowRadius="20"-->
+<!--android:text="@string/jadual"-->
+<!--android:textAlignment="center"-->
+<!--android:textAllCaps="true"-->
+<!--android:textColor="#000000"-->
+<!--android:textSize="40sp"-->
+<!--android:textStyle="bold|italic" />-->

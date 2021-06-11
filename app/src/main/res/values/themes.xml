@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.KarismaTuitionCentre" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#62A6E1</item>
-        <item name="colorPrimaryVariant">#6081B3</item>
+        <item name="colorPrimary">#0E1213</item>
+        <item name="colorPrimaryVariant">#4E5560</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

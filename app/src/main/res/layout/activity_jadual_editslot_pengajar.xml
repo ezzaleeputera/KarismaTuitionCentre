@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/whitebg">
+    <TextView
+        android:id="@+id/tvSubjectSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_editSlot_subjek"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="15dp"
+        android:hint="Nama Subjek"
+        android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvPengajarSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_editSlot_pengajar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="15dp"
+        android:hint="Nama Pengajar"
+        android:inputType="text"
+        android:textColor="#000"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvTimeBeforeSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvEditSlot_masaStart"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="15dp"
+        android:background="#4BA8E697"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:hint="Waktu Kelas Bermula"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:drawableTopCompat="@drawable/ic_time" />
+
+    <TextView
+        android:id="@+id/tvTimeAfterSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvEditSlot_masaEnd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="15dp"
+        android:background="#68CDB1B0"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:hint="Waktu Kelas Tamat"
+        android:textColorHint="#95150D0D"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:drawableTopCompat="@drawable/ic_time" />
+
+    <Button
+        android:id="@+id/btn_editSlot_submit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="#1E88E5"
+        android:text="Hantar"
+        android:textColor="#F6F6F6"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_editSlot_back"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="#00ACC1"
+        android:text="Kembali"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

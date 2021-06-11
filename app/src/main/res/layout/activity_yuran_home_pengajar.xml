@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/green_brick">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical" >
+
+
+        <Button
+            android:id="@+id/btn_VStatusYuran"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="200dp"
+
+            android:backgroundTint="#00897B"
+
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Status Yuran"
+            android:textSize="30sp" />
+
+
+        <Button
+            android:id="@+id/btn_VMaklumatYuran"
+            android:layout_width="303dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#00ACC1"
+
+            android:shadowColor="#000000"
+            android:shadowRadius="2"
+            android:text="Maklumat Yuran"
+            android:textSize="30sp" />
+
+    </TableLayout>
+</ScrollView>
+

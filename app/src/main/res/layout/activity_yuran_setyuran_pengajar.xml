@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_wcolor">
+
+    <TextView
+        android:id="@+id/tvNBsmy"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:background="#73B52D"
+        android:paddingStart="5dp"
+        android:text="Nama Bank:"
+        android:textColor="#131010"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NBsmy"
+        android:layout_width="234dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="#B4E67F"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text='"Nama Bank"'
+        android:textColor="#112DDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNBsmy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNPAsmy"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:background="#73B52D"
+        android:paddingStart="5dp"
+        android:text="Nama Pemilik Akaun:"
+        android:textColor="#131010"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNBsmy" />
+
+    <TextView
+        android:id="@+id/NPAsmy"
+        android:layout_width="233dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="80dp"
+        android:background="#B4E67F"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text='"Nama Pemiik Akaun"'
+        android:textColor="#112DDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNPAsmy"
+        app:layout_constraintTop_toBottomOf="@+id/NBsmy" />
+
+    <TextView
+        android:id="@+id/tvNABsmy"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:background="#73B52D"
+        android:paddingStart="5dp"
+        android:text="No. Akaun Bank:"
+        android:textColor="#131010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNPAsmy"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/NABsmy"
+        android:layout_width="235dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="#B4E67F"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text='"No. Akaun Bank"'
+        android:textColor="#112DDA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNABsmy"
+        app:layout_constraintTop_toBottomOf="@+id/NPAsmy"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <EditText
+        android:id="@+id/etNBsmy"
+        android:layout_width="255dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Isi nama bank.."
+        android:inputType="textPersonName"
+        android:textColorHint="#BC120E0E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNPAsmy"
+        app:layout_constraintEnd_toStartOf="@+id/btnNBsmy"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNBsmy"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etNPAsmy"
+        android:layout_width="255dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="Isi nama pemilik akaun.."
+        android:inputType="textPersonName"
+        android:textColorHint="#BC120E0E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNABsmy"
+        app:layout_constraintEnd_toStartOf="@+id/btnNPAsmy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNPAsmy"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etNABsmy"
+        android:layout_width="258dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="Isi no. akaun bank..."
+        android:inputType="textPersonName"
+        android:textColorHint="#BC120E0E"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNABsmy"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnNABsmy"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:background="#C0CA33"
+        android:drawableStart="@drawable/ic_baseline_edit"
+        android:text="Ubah"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etNABsmy"
+        app:layout_constraintTop_toBottomOf="@+id/NABsmy"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <Button
+        android:id="@+id/btnNPAsmy"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="52dp"
+        android:background="#C0CA33"
+        android:drawableStart="@drawable/ic_baseline_edit"
+        android:text="Ubah"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/NABsmy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NPAsmy"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <Button
+        android:id="@+id/btnNBsmy"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="52dp"
+        android:background="#C0CA33"
+        android:drawableStart="@drawable/ic_baseline_edit"
+        android:text="Ubah"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/NPAsmy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NBsmy"
+        app:layout_constraintVertical_bias="0.125" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

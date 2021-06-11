@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/sky_bg"
-        tools:context=".register_login.register.RegisterStudent_Activity_Pengajar">
+        tools:context=".register.reg_pelajar.Register_Activity_RegPelajar_Pengajar">
 
         <TextView
             android:id="@+id/titleMakPelajar"

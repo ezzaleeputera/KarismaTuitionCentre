@@ -6,7 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:gravity="center"
-tools:context=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa"
+tools:context=".maklumbalas.mb_pelajaribubapa.MaklumBalas_AddData_Pelajar_IbuBapa"
     android:background="@drawable/autumn_bg">
 
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="#F4511E"
+    android:elevation="5dp"
+    app:cardBackgroundColor="#B13913"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#F4511E"
+        android:padding="15dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/subjekHist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Subjek"
+            android:textColor="#000"
+            android:textSize="25sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pengajarHist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subjekHist"
+            android:layout_marginStart="10dp"
+            android:text="Nama pengajar"
+
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/masaSHist"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pengajarHist"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="MasaStart"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/masaEHist"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pengajarHist"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/tarikhSHist"
+            android:text="MasaEnd"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tarikhSHist"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/masaSHist"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="Tarikh"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

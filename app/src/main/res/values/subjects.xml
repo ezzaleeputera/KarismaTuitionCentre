@@ -1,0 +1,16 @@
+<resources>
+
+    <string-array name="subjek">
+        <item>Pilihan Subjek:</item>
+        <item>B.Melayu</item>
+        <item>B.Inggeris</item>
+        <item>Matematik</item>
+        <item>Math.Tambahan</item>
+        <item>Fizik</item>
+        <item>Biologi</item>
+        <item>P.Perakaunan</item>
+        <item>Sains</item>
+        <item>Kimia</item>
+        <item>B.Cina</item>
+    </string-array>
+</resources>

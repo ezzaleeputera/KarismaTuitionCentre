@@ -3,15 +3,17 @@
     package="com.example.karismatuitioncentre">
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_img"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_img_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KarismaTuitionCentre">
-        <activity android:name=".register_login.login.Login_Activity">
+        <activity android:name=".login.Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,105 +33,121 @@
 
         </activity>
 
-        <activity android:name=".register_login.register.RegisterStudent_Activity_Pengajar">
+        <activity android:name=".register.reg_pelajar.Register_Activity_RegPelajar_Pengajar">
 
         </activity>
 
-        <activity android:name=".register_login.register.RegisterIbuBapa_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Jadual_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Isnin_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Selasa_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Rabu_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Khamis_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Jumaat_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Sabtu_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Ahad_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Isnin_AddData_Pengajar">
+        <activity android:name=".register.reg_ibubapa.Register_Activity_RegIbubapa_Pengajar">
 
         </activity>
 
 
-         <activity android:name=".jadual.j_pengajar.Selasa_AddData_Pengajar">
+        <activity android:name=".maklumbalas.mb_pengajar.MaklumBalas_Activity_Pengajar">
 
         </activity>
 
-        <activity android:name=".jadual.j_pengajar.Rabu_AddData_Pengajar">
+        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_Activity_Pelajar_IbuBapa">
 
         </activity>
 
-        <activity android:name=".jadual.j_pengajar.Khamis_AddData_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Jumaat_AddData_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Sabtu_AddData_Pengajar">
-
-        </activity>
-
-        <activity android:name=".jadual.j_pengajar.Ahad_AddData_Pengajar">
-
-        </activity>
-
-        <activity android:name=".maklumbalas.MaklumBalas_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".maklumbalas.MaklumBalas_Activity_Pelajar_IbuBapa">
-
-        </activity>
-
-        <activity android:name=".maklumbalas.MaklumBalas_AddData_Pelajar_IbuBapa">
+        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_AddData_Pelajar_IbuBapa">
 
         </activity>
 
 
-        <activity android:name=".yuran.y_pengajar.Yuran_Activity_Pengajar">
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SearchStudent_Pengajar">
 
         </activity>
-        <activity android:name=".yuran.y_pengajar.Yuran_ViewActivity_Pengajar">
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetStatus_Pengajar">
 
         </activity>
-        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_IbuBapa_Test">
-
-        </activity>
-
-                <activity android:name=".yuran.y_pengajar.Yuran_Home_Pengajar">
-
-        </activity>
-              <activity android:name=".yuran.y_pengajar.Yuran_SetMaklumatYuran_Pengajar">
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewMaklumatPemabayaran_IbuBapa">
 
         </activity>
 
+                <activity android:name=".yuran.y_pengajar.Yuran_Activity_Home_Pengajar">
+
+        </activity>
+              <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetMaklumatPembayaran_Pengajar">
+
+        </activity>
+
+
+              <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_Home_Pelajar_IbuBapa_Test">
+
+        </activity>
+
+              <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_ViewSchedule_Pelajar_IbuBapa_Test">
+
+        </activity>
+
+              <activity android:name=".jadual.j_pengajar.Jadual_Activity_Home_Pengajar_Test">
+
+        </activity>
+
+              <activity android:name=".jadual.j_pengajar.Jadual_Activity_ViewSchedule_Pengajar_Test">
+
+        </activity>
+
+              <activity android:name=".jadual.j_pengajar.Jadual_Activity_AddSlot_Pengajar_Test">
+
+        </activity>
+
+              <activity android:name=".jadual.j_pengajar.Jadual_Activity_EditSlot_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pelajar.Kehadiran_Activity_QRScanner_Pelajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_Home_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_QRGenerator_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pelajar.Kehadiran_Activity_Home_Pelajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pelajar.Kehadiran_Activity_ViewKehadiran_Pelajar">
+
+        </activity>
+
+<!--        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_LineChart_Test">
+
+        </activity>-->
+
+        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_Home_Pelajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_ViewPerformance_Pelajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_Home_Pengajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_SearchStudent_Pengajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_ViewTestResult_Pengajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_Home_UpdateView_Pengajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_UpdatePerformance_Pengajar">
+
+        </activity>
 
     </application>
 
