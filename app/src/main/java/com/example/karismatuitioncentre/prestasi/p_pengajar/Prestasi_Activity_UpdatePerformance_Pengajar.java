@@ -49,7 +49,6 @@ public class Prestasi_Activity_UpdatePerformance_Pengajar extends AppCompatActiv
         String User_Key=getIntent().getStringExtra("User_Key");
         Objects.requireNonNull(getSupportActionBar()).setTitle("Mengisi Prestasi Pelajar");
 
-
         add_titleR= findViewById(R.id.add_titleR);
         add_descR= findViewById(R.id.add_descR);
         add_testM= findViewById(R.id.add_testM);
@@ -83,22 +82,34 @@ public class Prestasi_Activity_UpdatePerformance_Pengajar extends AppCompatActiv
 
             Calendar calendar=Calendar.getInstance();
             String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+            FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("List_Student").orderByChild("userid").equalTo(User_Key).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String parentid= snapshot.child("parentid").toString();
 
-            Map<String,Object> map=new HashMap<>();
-            map.put("titleR",titleR);
-            map.put("descR",descR);
-            map.put("date",currentDate);
-            map.put("userid",User_Key);
+                    Map<String,Object> map=new HashMap<>();
+                    map.put("titleR",titleR);
+                    map.put("descR",descR);
+                    map.put("date",currentDate);
+                    map.put("userid",User_Key);
+                    map.put("parentid",parentid);
 
-            FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("Remark_List").push()
-                    .setValue(map)
-                    .addOnSuccessListener(aVoid -> {
-                        add_titleR.setText("");
-                        add_descR.setText("");
+                    FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("Remark_List").push()
+                            .setValue(map)
+                            .addOnSuccessListener(aVoid -> {
+                                add_titleR.setText("");
+                                add_descR.setText("");
 
-                        Toast.makeText(getApplicationContext(),"Penambahan berjaya",Toast.LENGTH_LONG).show();
-                    })
-                    .addOnFailureListener(e -> Toast.makeText(getApplicationContext(),"Tidak Berjaya",Toast.LENGTH_LONG).show());
+                                Toast.makeText(getApplicationContext(),"Penambahan berjaya",Toast.LENGTH_LONG).show();
+                            })
+                            .addOnFailureListener(e -> Toast.makeText(getApplicationContext(),"Tidak Berjaya",Toast.LENGTH_LONG).show());
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
         });
 
@@ -131,19 +142,17 @@ public class Prestasi_Activity_UpdatePerformance_Pengajar extends AppCompatActiv
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-
                     for(DataSnapshot datas: dataSnapshot.getChildren()) {
-
+                        String parentid=dataSnapshot.child("parentid").toString();
                         Prestasi_StudentList_Model prestasi_studentList_model= datas.getValue(Prestasi_StudentList_Model.class);
                         assert prestasi_studentList_model != null;
-                        int numTest= (int) Math.toIntExact(prestasi_studentList_model.getNumTest());
+                        int numTest= Math.toIntExact(prestasi_studentList_model.getNumTest());
 
                         x[0]= numTest;
                         String key=datas.getKey();
                         SecKey[0] =key;
                         assert key != null;
-//                        FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("List_Student").child(key).child("numTest").setValue(key);
-                        Prestasi_TestMarks_Model prestasi_testMarks_model=new Prestasi_TestMarks_Model(x[0]+1,y,User_Key,dateTest);
+                        Prestasi_TestMarks_Model prestasi_testMarks_model=new Prestasi_TestMarks_Model(x[0]+1,y,User_Key,dateTest,parentid);
 
                         FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("Test_List").push(). setValue(prestasi_testMarks_model).addOnSuccessListener(aVoid -> {
                             add_testM.setText("");

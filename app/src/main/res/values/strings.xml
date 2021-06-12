@@ -38,8 +38,46 @@
     <string name="selesai">Selesai</string>
     <string name="pembayaran_yuran_ibubapa">Pembayaran Yuran- IbuBapa</string>
     <string name="search_button">Search Button</string>
-    <string name="carian_nama_pelajar">Carian nama pelajar...</string>
+    <string name="carian_nama_pelajar">Carian nama pelajar…</string>
     <string name="qr_placeholder">QR Placeholder</string>
+    <string name="lihat_keputusan_ujian">Lihat Keputusan Ujian</string>
+    <string name="lihat_ulasan_pengajar">Lihat Ulasan Pengajar</string>
+    <string name="tambah_prestasi">Tambah Prestasi</string>
+    <string name="akaun_baharu_ibubapa">Akaun Baharu IbuBapa</string>
+    <string name="akaun_sedia_ada_ibubapa">Akaun Sedia Ada IbuBapa</string>
+    <string name="tajuk_maklum_balas">Tajuk Maklum Balas</string>
+    <string name="kembali">Kembali</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="kp">KP</string>
+    <string name="tajuk_ulasan">Tajuk ulasan</string>
+    <string name="ulasan">Ulasan</string>
+    <string name="no_bilangan_ujian">No. Bilangan Ujian:</string>
+    <string name="bilangan">Bilangan</string>
+    <string name="markah_ujian">Markah Ujian:</string>
+    <string name="markah">Markah</string>
+    <string name="tarikh">tarikh</string>
+    <string name="status_yuran_mac">Status Yuran Mac:</string>
+    <string name="status_yuran_april">Status Yuran April:</string>
+    <string name="status_yuran_mei">Status Yuran Mei:</string>
+    <string name="status_yuran_jun">Status Yuran Jun:</string>
+    <string name="status_yuran_julai">Status Yuran Julai:</string>
+    <string name="status_yuran_august">Status Yuran August:</string>
+    <string name="status_yuran_september">Status Yuran September:</string>
+    <string name="status_yuran_oktober">Status Yuran Oktober:</string>
+    <string name="status_yuran_november">Status Yuran November:</string>
+    <string name="status_yuran_disember">Status Yuran Disember:</string>
+    <string name="status_yuran_januari">Status Yuran Januari:</string>
+    <string name="belum_membayar">Belum Membayar</string>
+    <string name="status_yuran_febuari">Status Yuran Febuari:</string>
+    <string name="status_pembayaran">Status Pembayaran</string>
+    <string name="sudah_membayar">Sudah Membayar</string>
+    <string name="confirm_payment">Confirm Payment</string>
+    <string name="ruang_hantar_rumusan_prestasi_terkini_pelajar">Ruang Hantar Rumusan Prestasi Terkini Pelajar</string>
+    <string name="berikan_tajuk_rumusan">Berikan Tajuk Rumusan</string>
+    <string name="berikan_rumusan_terkini_pelajar_cth_sikap_tips">Berikan Rumusan Terkini Pelajar. cth:(Sikap/ Tips)</string>
+    <string name="ruang_isi_markah_ujian_terkini_pelajar">Ruang Isi Markah Ujian Terkini Pelajar</string>
+    <string name="berikan_markah_1_100">Berikan Markah (1–100)</string>
 
 
 </resources>

@@ -17,108 +17,96 @@
 
 
 
-            <TableRow>
 
-                <TextView
-                    android:id="@+id/tvMonthlyFee"
+
+                <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Yuran Bulanan:"
-                    android:textAllCaps="true"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
 
-                <TextView
-                    android:id="@+id/tvMonthFee"
-                    android:layout_width="168dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="50dp"
-                    android:text="Yuran Bulanan"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </TableRow>
+                    <TextView
+                        android:id="@+id/tvJanuaryFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/status_yuran_januari"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvJanFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/status_pembayaran"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btnJanCon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginEnd="48dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#43A047"
+                        android:text="@string/sudah_membayar"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btnJanCan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginEnd="48dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#B63447"
+                        android:text="@string/belum_membayar"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
 
 
-                <TextView
-                    android:id="@+id/tvJanuaryFee"
+                <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Status Yuran Januari:"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tvJanFee"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="0dp"
-                    android:text="Status Pembayaran"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/btnJanCon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginEnd="48dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#43A047"
-                    android:text="Sudah Membayar"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/btnJanCan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginEnd="48dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#B63447"
-                    android:text="Belum Membayar"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
 
                     <TextView
                         android:id="@+id/tvFebruaryFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran Febuari:"
+                        android:text="@string/status_yuran_febuari"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -133,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -151,7 +139,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -165,20 +153,32 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
+
                     <TextView
                         android:id="@+id/tvMarchFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran Mac:"
+                        android:text="@string/status_yuran_mac"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -193,7 +193,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -211,7 +211,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -225,21 +225,31 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
 
                     <TextView
                         android:id="@+id/tvAprilFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran April:"
+                        android:text="@string/status_yuran_april"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -254,7 +264,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -272,7 +282,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -288,19 +298,30 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
+
                     <TextView
                         android:id="@+id/tvMayFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran Mei:"
+                        android:text="@string/status_yuran_mei"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -315,7 +336,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -333,7 +354,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -347,21 +368,32 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
+
+                <TextView
                         android:id="@+id/tvJuneFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran Jun:"
+                        android:text="@string/status_yuran_jun"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -376,7 +408,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -394,7 +426,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -408,21 +440,30 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
 
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
                     <TextView
                         android:id="@+id/tvJulyFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran Julai:"
+                        android:text="@string/status_yuran_julai"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -437,7 +478,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -454,7 +495,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Confirm Payment"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -468,21 +509,30 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
 
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
                     <TextView
                         android:id="@+id/tvAugustFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran August:"
+                        android:text="@string/status_yuran_august"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -497,7 +547,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -514,7 +564,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -528,21 +578,30 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
 
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
                     <TextView
                         android:id="@+id/tvSeptemberFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Status Yuran September:"
+                        android:text="@string/status_yuran_september"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -557,7 +616,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -574,7 +633,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -588,21 +647,31 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
+
 
                     <TextView
                         android:id="@+id/tvOctoberFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Yuran Oktober:"
+                        android:text="@string/status_yuran_oktober"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -617,7 +686,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -634,7 +703,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -648,21 +717,31 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxwhite">
 
                     <TextView
                         android:id="@+id/tvNovemberFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Yuran November:"
+                        android:text="@string/status_yuran_november"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -677,7 +756,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:text="Status Pembayaran"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -694,7 +773,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -708,21 +787,33 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+
+                    android:background="@drawable/boxwhite">
 
                     <TextView
                         android:id="@+id/tvDecemberFee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Yuran Disember:"
+                        android:text="@string/status_yuran_disember"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -737,8 +828,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="0dp"
-                        android:layout_marginBottom="60dp"
-                        android:text="Status Pembayaran"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/status_pembayaran"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         android:textStyle="italic"
@@ -756,7 +847,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_marginBottom="10dp"
                         android:background="#43A047"
-                        android:text="Sudah Membayar"
+                        android:text="@string/sudah_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
@@ -770,14 +861,15 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="48dp"
                         android:layout_marginEnd="48dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="20dp"
                         android:background="#B63447"
-                        android:text="Belum Membayar"
+                        android:text="@string/belum_membayar"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+                </TableLayout>
 
 
     </TableLayout>

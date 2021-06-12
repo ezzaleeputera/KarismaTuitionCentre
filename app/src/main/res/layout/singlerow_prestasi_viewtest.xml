@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:elevation="5dp"
+    app:cardBackgroundColor="#00FFFFFF"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/boxwhite"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/list_root_P"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="0dp"
+
+                android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/tvTitNoTest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10sp"
+                            android:paddingTop="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingBottom="10sp"
+                            android:text="@string/no_bilangan_ujian"
+                            android:textAllCaps="true"
+                            android:textColor="#532334"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvNoTest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10sp"
+                            android:paddingTop="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingBottom="10sp"
+                            android:text="@string/bilangan"
+                            android:textAlignment="viewStart"
+                            android:textColor="#DA5B88"
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+                    </TableRow>
+                </TableLayout>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvTitTestMarks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingBottom="10sp"
+                            android:text="@string/markah_ujian"
+                            android:textColor="#00897B"
+                            android:textSize="16sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/tvTestMarks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingBottom="10sp"
+                            android:text="@string/markah"
+                            android:textAlignment="viewStart"
+                            android:textColor="#03CAB6"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvtarikh"
+                            android:layout_width="79dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="250dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/tarikh"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#3949AB"
+                            android:textSize="12sp"
+                            android:textStyle="bold|italic" />
+
+
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

@@ -7,7 +7,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.prestasi.p_pelajar.Prestasi_Activity_ViewPerformance_Pelajar;
 
 import java.util.Objects;
 

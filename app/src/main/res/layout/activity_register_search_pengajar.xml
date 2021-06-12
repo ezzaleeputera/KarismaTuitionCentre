@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_mountains">
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="345dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/search_layout"
+        android:ems="10"
+        android:hint="@string/carian_nama_pelajar"
+        android:autofillHints="student name"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
+
+    <ImageButton
+        android:id="@+id/ibSearch"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="30dp"
+        android:background="#3B777C"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/search_button"
+        app:srcCompat="@drawable/ic_baseline_search_24"
+        app:tint="#000000" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/student_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="575dp"
+                    android:layout_marginTop="100dp">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>
+

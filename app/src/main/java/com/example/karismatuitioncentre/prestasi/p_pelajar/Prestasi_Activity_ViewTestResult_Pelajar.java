@@ -1,4 +1,4 @@
-package com.example.karismatuitioncentre.prestasi.p_pengajar;
+package com.example.karismatuitioncentre.prestasi.p_pelajar;
 
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karismatuitioncentre.R;
 import com.example.karismatuitioncentre.prestasi.Prestasi_TestMarks_Model;
+import com.example.karismatuitioncentre.prestasi.Prestasi_Remarks_Model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.github.mikephil.charting.charts.LineChart;
@@ -37,7 +38,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity {
+public class Prestasi_Activity_ViewTestResult_Pelajar extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
     LineChart lineChart;
@@ -46,27 +47,30 @@ public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity
     LineData lineData;
     RecyclerView recyclerView;
     FirebaseRecyclerOptions<Prestasi_TestMarks_Model> options;
-    FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pengajar> adapter;
+    FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pelajar> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_linechart_pelajar_test);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Lihat Prestasi Pelajar");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Lamandfsdf");
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
-        String User_Key=getIntent().getStringExtra("User_Key");
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
+        String uid = user.getUid();
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         options= new FirebaseRecyclerOptions.Builder<Prestasi_TestMarks_Model>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child(Sub_Key)
-                        .child("Test_List").orderByChild("userid").equalTo(User_Key), Prestasi_TestMarks_Model.class)
+                        .child("Test_List").orderByChild("userid").equalTo(uid), Prestasi_TestMarks_Model.class)
                 .build();
 
         lineChart=findViewById(R.id.lineChartView);
         databaseReference= FirebaseDatabase.getInstance().getReference(Sub_Key);
-        retrieveData(User_Key);
+        retrieveData();
         lineChart.setDrawGridBackground(true);
         lineChart.setDrawBorders(true);
         lineChart.setBorderWidth(5);
@@ -110,30 +114,33 @@ public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity
         description.setYOffset(10);
         lineChart.setDescription(description);
 
-        adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pengajar>(options) {
+        adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pelajar>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_Pengajar holder, int position, @NonNull Prestasi_TestMarks_Model model) {
+            protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_Pelajar holder, int position, @NonNull Prestasi_TestMarks_Model model) {
                 holder.tvNoTest.setText(model.getxValue());
                 holder.tvTestMarks.setText(model.getyValue());
                 holder.tvtarikh.setText(model.getDateTest());
+
             }
 
             @NonNull
             @Override
-            public Prestasi_MyViewHolder_ViewTestResult_Pengajar onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            public Prestasi_MyViewHolder_ViewTestResult_Pelajar onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow_prestasi_viewtest,parent,false);
 
 
-                return new Prestasi_MyViewHolder_ViewTestResult_Pengajar(v);
+                return new Prestasi_MyViewHolder_ViewTestResult_Pelajar(v);
             }
         };
         adapter.startListening();
         recyclerView.setAdapter(adapter);
     }
-    private void retrieveData(String User_Key){
+    private void retrieveData(){
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
 
-
-        databaseReference.child("Test_List").orderByChild("userid").equalTo(User_Key).addValueEventListener(new ValueEventListener() {
+        assert user != null;
+        String userId=user.getUid();
+        databaseReference.child("Test_List").orderByChild("userid").equalTo(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 ArrayList<Entry> dataVals= new ArrayList<>();

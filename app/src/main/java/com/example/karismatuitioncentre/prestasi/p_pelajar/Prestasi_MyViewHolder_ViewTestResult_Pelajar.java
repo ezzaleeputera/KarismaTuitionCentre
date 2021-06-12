@@ -8,17 +8,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karismatuitioncentre.R;
 
-public class Prestasi_MyViewHolder_ViewPerformance_Pelajar extends RecyclerView.ViewHolder {
-    TextView tvTitleRemarks,tvRemarks,tvtarikh;
+public class Prestasi_MyViewHolder_ViewTestResult_Pelajar extends RecyclerView.ViewHolder {
+    TextView tvNoTest,tvTestMarks,tvtarikh;
 
     View v;
 
-    public Prestasi_MyViewHolder_ViewPerformance_Pelajar(@NonNull View itemView) {
+    public Prestasi_MyViewHolder_ViewTestResult_Pelajar(@NonNull View itemView) {
         super(itemView);
-        tvTitleRemarks= itemView.findViewById(R.id.tvTitleRemarks);
-        tvRemarks= itemView.findViewById(R.id.tvRemarks);
+        tvNoTest= itemView.findViewById(R.id.tvNoTest);
+        tvTestMarks= itemView.findViewById(R.id.tvTestMarks);
         tvtarikh= itemView.findViewById(R.id.tvtarikh);
         v=itemView;
-
     }
 }

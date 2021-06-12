@@ -33,67 +33,27 @@
 
         </activity>
 
-        <activity android:name=".register.reg_pelajar.Register_Activity_RegPelajar_Pengajar">
+        <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_Home_Pelajar_IbuBapa_Test">
 
         </activity>
 
-        <activity android:name=".register.reg_ibubapa.Register_Activity_RegIbubapa_Pengajar">
+        <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_ViewSchedule_Pelajar_IbuBapa_Test">
 
         </activity>
 
-
-        <activity android:name=".maklumbalas.mb_pengajar.MaklumBalas_Activity_Pengajar">
-
-        </activity>
-
-        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_Activity_Pelajar_IbuBapa">
+        <activity android:name=".jadual.j_pengajar.Jadual_Activity_Home_Pengajar_Test">
 
         </activity>
 
-        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_AddData_Pelajar_IbuBapa">
+        <activity android:name=".jadual.j_pengajar.Jadual_Activity_ViewSchedule_Pengajar_Test">
 
         </activity>
 
-
-        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SearchStudent_Pengajar">
-
-        </activity>
-        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetStatus_Pengajar">
-
-        </activity>
-        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewMaklumatPemabayaran_IbuBapa">
+        <activity android:name=".jadual.j_pengajar.Jadual_Activity_AddSlot_Pengajar_Test">
 
         </activity>
 
-                <activity android:name=".yuran.y_pengajar.Yuran_Activity_Home_Pengajar">
-
-        </activity>
-              <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetMaklumatPembayaran_Pengajar">
-
-        </activity>
-
-
-              <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_Home_Pelajar_IbuBapa_Test">
-
-        </activity>
-
-              <activity android:name=".jadual.j_pelajaribubapa.Jadual_Activity_ViewSchedule_Pelajar_IbuBapa_Test">
-
-        </activity>
-
-              <activity android:name=".jadual.j_pengajar.Jadual_Activity_Home_Pengajar_Test">
-
-        </activity>
-
-              <activity android:name=".jadual.j_pengajar.Jadual_Activity_ViewSchedule_Pengajar_Test">
-
-        </activity>
-
-              <activity android:name=".jadual.j_pengajar.Jadual_Activity_AddSlot_Pengajar_Test">
-
-        </activity>
-
-              <activity android:name=".jadual.j_pengajar.Jadual_Activity_EditSlot_Pengajar">
+        <activity android:name=".jadual.j_pengajar.Jadual_Activity_EditSlot_Pengajar">
 
         </activity>
 
@@ -117,15 +77,51 @@
 
         </activity>
 
-<!--        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_LineChart_Test">
+        <activity android:name=".maklumbalas.mb_pengajar.MaklumBalas_Activity_Pengajar">
 
-        </activity>-->
+        </activity>
+
+        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_Activity_Pelajar_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".maklumbalas.mb_pelajaribubapa.MaklumBalas_Activity_AddData_Pelajar_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_ibubapa.Prestasi_Activity_Home_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_ibubapa.Prestasi_Activity_Home_ViewTestRemark_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_ibubapa.Prestasi_Activity_SearchStudent_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_ibubapa.Prestasi_Activity_ViewRemarks_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_ibubapa.Prestasi_Activity_ViewTestResult_IbuBapa">
+
+        </activity>
 
         <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_Home_Pelajar">
 
         </activity>
 
-        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_ViewPerformance_Pelajar">
+        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_ViewTestResult_Pelajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_ViewRemarks_Pelajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pelajar.Prestasi_Activity_Home_ViewTestRemark_Pelajar">
 
         </activity>
 
@@ -146,6 +142,53 @@
         </activity>
 
         <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_UpdatePerformance_Pengajar">
+
+        </activity>
+
+        <activity android:name=".prestasi.p_pengajar.Prestasi_Activity_ViewRemarks_Pengajar">
+
+        </activity>
+
+        <activity android:name=".register.reg_pelajar.Register_Activity_RegPelajar_Pengajar">
+
+        </activity>
+
+        <activity android:name=".register.reg_ibubapa.Register_Activity_RegIbubapa_Pengajar">
+
+        </activity>
+
+        <activity android:name=".register.reg_ibubapa.Register_Activity_HomeExistingNewParent_Pengajar">
+
+        </activity>
+
+        <activity android:name=".register.reg_ibubapa.Register_Activity_ExistingParent_Pengajar">
+
+        </activity>
+
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SearchStudent_Pengajar">
+
+        </activity>
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetStatus_Pengajar">
+
+        </activity>
+
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_Home_Pengajar">
+
+        </activity>
+
+        <activity android:name=".yuran.y_pengajar.Yuran_Activity_SetMaklumatPembayaran_Pengajar">
+
+        </activity>
+
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewMaklumatPemabayaran_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewStatus_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_SearchStudent_IbuBapa">
 
         </activity>
 

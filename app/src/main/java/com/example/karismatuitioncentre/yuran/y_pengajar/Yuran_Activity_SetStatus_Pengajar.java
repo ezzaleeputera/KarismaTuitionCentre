@@ -44,8 +44,7 @@ public class Yuran_Activity_SetStatus_Pengajar extends AppCompatActivity {
         txtOct=findViewById(R.id.tvOctFee);
         txtNov=findViewById(R.id.tvNovFee);
         txtDec=findViewById(R.id.tvDecFee);
-        tvMonthlyFee=findViewById(R.id.tvMonthlyFee);
-        tvMonthFee=findViewById(R.id.tvMonthFee);
+
 
         //Button for Fee Status
         btnJanCan=findViewById(R.id.btnJanCan);
@@ -84,8 +83,7 @@ public class Yuran_Activity_SetStatus_Pengajar extends AppCompatActivity {
         btnDecCan=findViewById(R.id.btnDecCan);
         btnDecCon=findViewById(R.id.btnDecCon);
 
-        tvMonthFee.setVisibility(View.GONE);
-        tvMonthlyFee.setVisibility(View.GONE);
+
 
         //DatabaseReference for Student fee
         dataSnapshot=FirebaseDatabase.getInstance().getReference().child("Stud_Fee");

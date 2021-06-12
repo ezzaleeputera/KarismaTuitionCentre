@@ -1,11 +1,8 @@
-package com.example.karismatuitioncentre.prestasi.p_pelajar;
+package com.example.karismatuitioncentre.prestasi.p_ibubapa;
 
-import android.app.AlertDialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karismatuitioncentre.R;
-import com.example.karismatuitioncentre.jadual.Jadual_Model;
-import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_Activity_EditSlot_Pengajar;
-import com.example.karismatuitioncentre.jadual.j_pengajar.Jadual_MyViewHolder_ViewSchedule_Pengajar_Test;
 import com.example.karismatuitioncentre.prestasi.Prestasi_TestMarks_Model;
-import com.example.karismatuitioncentre.prestasi.Prestasi_Remarks_Model;
+import com.example.karismatuitioncentre.prestasi.p_pelajar.Prestasi_MyViewHolder_ViewTestResult_Pelajar;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.github.mikephil.charting.charts.LineChart;
@@ -42,10 +36,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Objects;
 
-public class Prestasi_Activity_ViewPerformance_Pelajar extends AppCompatActivity {
+public class Prestasi_Activity_ViewTestResult_IbuBapa extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
     LineChart lineChart;
@@ -53,8 +46,8 @@ public class Prestasi_Activity_ViewPerformance_Pelajar extends AppCompatActivity
     ArrayList<ILineDataSet> iLineDataSets= new ArrayList<>();
     LineData lineData;
     RecyclerView recyclerView;
-    FirebaseRecyclerOptions<Prestasi_Remarks_Model> options;
-    FirebaseRecyclerAdapter<Prestasi_Remarks_Model, Prestasi_MyViewHolder_ViewPerformance_Pelajar> adapter;
+    FirebaseRecyclerOptions<Prestasi_TestMarks_Model> options;
+    FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_IbuBapa> adapter;
 
 
     @Override
@@ -70,9 +63,9 @@ public class Prestasi_Activity_ViewPerformance_Pelajar extends AppCompatActivity
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        options= new FirebaseRecyclerOptions.Builder<Prestasi_Remarks_Model>()
+        options= new FirebaseRecyclerOptions.Builder<Prestasi_TestMarks_Model>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child(Sub_Key)
-                        .child("Remark_List").orderByChild("userid").equalTo(uid), Prestasi_Remarks_Model.class)
+                        .child("Test_List").orderByChild("parentid").equalTo(uid), Prestasi_TestMarks_Model.class)
                 .build();
 
         lineChart=findViewById(R.id.lineChartView);
@@ -121,22 +114,22 @@ public class Prestasi_Activity_ViewPerformance_Pelajar extends AppCompatActivity
         description.setYOffset(10);
         lineChart.setDescription(description);
 
-        adapter=new FirebaseRecyclerAdapter<Prestasi_Remarks_Model, Prestasi_MyViewHolder_ViewPerformance_Pelajar>(options) {
+        adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_IbuBapa>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewPerformance_Pelajar holder, int position, @NonNull Prestasi_Remarks_Model model) {
-                holder.tvTitleRemarks.setText(model.getTitleR());
-                holder.tvRemarks.setText(model.getDescR());
-                holder.tvtarikh.setText(model.getDateR());
+            protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_IbuBapa holder, int position, @NonNull Prestasi_TestMarks_Model model) {
+                holder.tvNoTest.setText(model.getxValue());
+                holder.tvTestMarks.setText(model.getyValue());
+                holder.tvtarikh.setText(model.getDateTest());
 
             }
 
             @NonNull
             @Override
-            public Prestasi_MyViewHolder_ViewPerformance_Pelajar onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow_prestasi,parent,false);
+            public Prestasi_MyViewHolder_ViewTestResult_IbuBapa onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow_prestasi_viewtest,parent,false);
 
 
-                return new Prestasi_MyViewHolder_ViewPerformance_Pelajar(v);
+                return new Prestasi_MyViewHolder_ViewTestResult_IbuBapa(v);
             }
         };
         adapter.startListening();
@@ -147,7 +140,8 @@ public class Prestasi_Activity_ViewPerformance_Pelajar extends AppCompatActivity
 
         assert user != null;
         String userId=user.getUid();
-        databaseReference.child("Test_List").orderByChild("userid").equalTo(userId).addValueEventListener(new ValueEventListener() {
+
+        databaseReference.child("Test_List").orderByChild("parentid").equalTo(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 ArrayList<Entry> dataVals= new ArrayList<>();

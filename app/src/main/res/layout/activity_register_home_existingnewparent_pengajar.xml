@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/yellow_light">
+    android:background="@drawable/red_warped">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -13,41 +13,30 @@
 
 
         <Button
-            android:id="@+id/btn_ViewTestResult"
+            android:id="@+id/btn_NewParents"
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="200dp"
 
-            android:backgroundTint="#FABBA6"
+            android:backgroundTint="#E69EB8"
 
             android:shadowColor="#000000"
             android:shadowRadius="2"
-            android:text="@string/lihat_keputusan_ujian"
+            android:text="@string/akaun_baharu_ibubapa"
             android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_ViewRemark"
-            android:layout_width="303dp"
-            android:layout_height="112dp"
-            android:layout_marginTop="40dp"
 
-            android:backgroundTint="#D66541"
-
-            android:shadowColor="#000000"
-            android:shadowRadius="2"
-            android:text="@string/lihat_ulasan_pengajar"
-            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/btn_EditPerformance"
+            android:id="@+id/btn_ExistingParents"
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="0dp"
-            android:backgroundTint="#953011"
+            android:backgroundTint="#E53935"
             android:shadowColor="#000000"
             android:shadowRadius="2"
-            android:text="@string/tambah_prestasi"
+            android:text="@string/akaun_sedia_ada_ibubapa"
             android:textSize="30sp" />
 
     </TableLayout>

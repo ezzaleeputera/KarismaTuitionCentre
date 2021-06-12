@@ -1,4 +1,4 @@
-package com.example.karismatuitioncentre.yuran.y_pengajar;
+package com.example.karismatuitioncentre.yuran;
 
 public class Yuran_Model
 {

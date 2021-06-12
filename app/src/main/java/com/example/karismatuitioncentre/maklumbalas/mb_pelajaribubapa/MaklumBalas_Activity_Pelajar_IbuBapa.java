@@ -24,7 +24,7 @@
         setContentView(R.layout.activity_maklumbalas_pelajar_ibubapa);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Senarai Maklum Balas");
 
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MaklumBalas_Model> options= new FirebaseRecyclerOptions
@@ -37,7 +37,7 @@
 
         fb= findViewById(R.id.fabAdd);
         fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),
-                MaklumBalas_AddData_Pelajar_IbuBapa.class)));
+                MaklumBalas_Activity_AddData_Pelajar_IbuBapa.class)));
 
     }
     @Override

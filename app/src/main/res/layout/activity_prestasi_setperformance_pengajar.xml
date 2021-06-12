@@ -25,7 +25,7 @@
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".maklumbalas.mb_pelajaribubapa.MaklumBalas_AddData_Pelajar_IbuBapa">
+            tools:context=".maklumbalas.mb_pelajaribubapa.MaklumBalas_Activity_AddData_Pelajar_IbuBapa">
 
             <TextView
                 android:id="@+id/tvRumusan"
@@ -36,7 +36,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="40dp"
                 android:paddingBottom="20dp"
-                android:text="Ruang Hantar Rumusan Prestasi Terkini Pelajar"
+                android:text="@string/ruang_hantar_rumusan_prestasi_terkini_pelajar"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#090909"
@@ -50,7 +50,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/boxwhite"
-                android:hint="Berikan Tajuk Rumusan"
+                android:hint="@string/berikan_tajuk_rumusan"
+                android:inputType="text"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
@@ -65,7 +66,7 @@
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/boxwhite"
                 android:gravity="top|start"
-                android:hint="Berikan Rumusan Terkini Pelajar. cth:(Sikap/ Tips)"
+                android:hint="@string/berikan_rumusan_terkini_pelajar_cth_sikap_tips"
                 android:inputType="textMultiLine"
                 android:lines="8"
                 android:maxLines="10"
@@ -91,7 +92,7 @@
                 android:paddingTop="10dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="10dp"
-                android:text="Hantar"
+                android:text="@string/hantar"
                 android:textSize="16sp"
                 android:textStyle="bold|italic" />
 
@@ -119,7 +120,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="40dp"
                 android:paddingBottom="20dp"
-                android:text="Ruang Isi Markah Ujian Terkini Pelajar"
+                android:text="@string/ruang_isi_markah_ujian_terkini_pelajar"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#090909"
@@ -133,7 +134,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/boxwhite"
-                android:hint="Berikan Markah Ujian Pelajar (1-100)"
+                android:hint="@string/berikan_markah_1_100"
+                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
@@ -153,7 +155,7 @@
                 android:paddingTop="10dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="10dp"
-                android:text="Hantar"
+                android:text="@string/hantar"
                 android:textSize="16sp"
                 android:textStyle="bold|italic" />
 

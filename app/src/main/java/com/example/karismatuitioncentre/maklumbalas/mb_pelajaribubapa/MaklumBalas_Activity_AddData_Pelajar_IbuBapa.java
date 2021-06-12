@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Objects;
 
 
-public class MaklumBalas_AddData_Pelajar_IbuBapa extends AppCompatActivity
+public class MaklumBalas_Activity_AddData_Pelajar_IbuBapa extends AppCompatActivity
 {
     EditText title,desc;
     Button submit,back;

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.karismatuitioncentre.R;
 import com.example.karismatuitioncentre.home.Home_Activity_Pengajar;
+import com.example.karismatuitioncentre.register.reg_pelajar.Register_Activity_RegPelajar_Pengajar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -38,8 +39,6 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle("Pendaftaran(Ibu Bapa)");
         getSupportActionBar().setSubtitle("Isi maklumat IbuBapa");
 
-        Intent intent = getIntent();
-
 
         emel_regIB = findViewById(R.id.emel_regIB);
         nama_regIB = findViewById(R.id.nama_regIB);
@@ -54,42 +53,14 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBarIB);
 
         dataSnapshot=FirebaseDatabase.getInstance().getReference().child("Student_list");
-        String studentID_key=getIntent().getStringExtra("studentID_key");
-        final String[] namaS ;
-        final String[]  emelS;
-        final String[]  icS;
-        final String[]  useridS;
-
-/*        testSnap1.setText(studentID_key);*/
-
-       /* dataSnapshot.child(studentID_key).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    String nama= Objects.requireNonNull(dataSnapshot.child("nama").getValue()).toString();
-                    String emelStudent= Objects.requireNonNull(dataSnapshot.child("email").getValue()).toString();
-                    String icStudent= Objects.requireNonNull(dataSnapshot.child("kp").getValue()).toString();
-                    String useridStudent= Objects.requireNonNull(dataSnapshot.child("userid").getValue()).toString();
-
-                    namaS[0] =nama;
-                    emelS[0] =emelStudent;
-                    icS[0] =icStudent;
-                    useridS[0] =useridStudent;
-                    testSnap2.setText(namaS[0]);
-
-
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+//        String studentID_key=getIntent().getStringExtra("studentID_key");
+//        final String[] namaS ;
+//        final String[]  emelS;
+//        final String[]  icS;
+//        final String[]  useridS;
 
 
 
-        });*/
         btn_regIB.setOnClickListener(view -> {
 
 
@@ -132,7 +103,7 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
 
             progressBar.setVisibility(View.VISIBLE);
 
-            fAuth.createUserWithEmailAndPassword(emailIB, String.valueOf(klIB)).addOnCompleteListener(task -> {
+            fAuth.createUserWithEmailAndPassword(emailIB, klIB).addOnCompleteListener(task -> {
 
                 if (task.isSuccessful()) {
                     progressBar.setVisibility(View.INVISIBLE);
@@ -147,7 +118,7 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
                     Map<String, Object> userIB = new HashMap<>();
                     userIB.put("to_User", "2"); // to_user "2" refer to student
                     userIB.put("email", emailIB);
-                    userIB.put("userid", userID);
+                    userIB.put("parentid", userID);
                     ref.child("User_list").push()
                             .setValue(userIB)
                             .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat pelajar berjaya", Toast.LENGTH_LONG).show())
@@ -160,20 +131,21 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
                     parent.put("nama", namaIB);
                     parent.put("kp", kpIB);
                     parent.put("kl", klIB);
-//                    parent.put("childrenEmail", emelStudent);
-//                    parent.put("childrenName",namaStudent);
-//                    parent.put("childrenIC",icStudent);
-                    parent.put("useridChild",studentID_key);
                     parent.put("to_User", "2");
-                    parent.put("userid", userID);
+                    parent.put("parentid", userID);
                     ref.child("Parent_list").push()
                             .setValue(parent)
                             .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat IbuBapa berjaya", Toast.LENGTH_LONG).show())
                             .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
 
 
+//                    finish();
+//                    startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
+
                     finish();
-                    startActivity(new Intent(getApplicationContext(), Home_Activity_Pengajar.class));
+                    Intent intent = new Intent(getApplicationContext(), Register_Activity_RegPelajar_Pengajar.class);
+                    intent.putExtra("parentID_key", userID);
+                    startActivity(intent);
 
                 } else {
                     Toast.makeText(Register_Activity_RegIbubapa_Pengajar.this, "Error !" + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
