@@ -20,7 +20,8 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_home_pelajar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Prestasi");
+        getSupportActionBar().setSubtitle("Pilih subjek yang tertentu");
 
 
         btnPerfBM = findViewById(R.id.btnPerfBM);
@@ -37,21 +38,21 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfBM.setOnClickListener(view ->{
             sub="BM_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
         } );
         btnPerfBI.setOnClickListener(view ->{
             sub="BI_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
         } );
         btnPerfMath.setOnClickListener(view -> {
             sub = "Mt_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -59,7 +60,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfPhy.setOnClickListener(view ->{
             sub="Phy_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -68,7 +69,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfMathAdd.setOnClickListener(view ->{
             sub="AMt_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -76,7 +77,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfBio.setOnClickListener(view ->{
             sub="Bio_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -84,7 +85,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfPp.setOnClickListener(view ->{
             sub="Pp_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -92,7 +93,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfSai.setOnClickListener(view ->{
             sub="Sai_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -100,7 +101,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfKim.setOnClickListener(view ->{
             sub="Kim_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();
@@ -108,7 +109,7 @@ public class Prestasi_Activity_Home_IbuBapa extends AppCompatActivity {
 
         btnPerfBC.setOnClickListener(view ->{
             sub="BC_Perf";
-            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_ViewTestResult_IbuBapa.class);
+            Intent intent = new Intent(getApplicationContext(), Prestasi_Activity_SearchStudent_IbuBapa.class);
             intent.putExtra("Sub_Key", sub);
             startActivity(intent);
             finish();

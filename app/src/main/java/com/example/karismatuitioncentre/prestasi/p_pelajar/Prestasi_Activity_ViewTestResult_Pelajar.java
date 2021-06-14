@@ -54,7 +54,7 @@ public class Prestasi_Activity_ViewTestResult_Pelajar extends AppCompatActivity 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_linechart_pelajar_test);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Lamandfsdf");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Markah Ujian");
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -78,7 +78,8 @@ public class Prestasi_Activity_ViewTestResult_Pelajar extends AppCompatActivity 
         lineChart.getAxisRight().setEnabled(false);
         lineChart.getAxisRight().setAxisMinimum(0);
         lineChart.getAxisLeft().setAxisMinimum(0);
-
+        lineChart.setNoDataText("Tiada rekod ujian lagi");
+        lineChart.setNoDataTextColor(ContextCompat.getColor(this, R.color.black));
 
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
@@ -117,8 +118,8 @@ public class Prestasi_Activity_ViewTestResult_Pelajar extends AppCompatActivity 
         adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pelajar>(options) {
             @Override
             protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_Pelajar holder, int position, @NonNull Prestasi_TestMarks_Model model) {
-                holder.tvNoTest.setText(model.getxValue());
-                holder.tvTestMarks.setText(model.getyValue());
+                holder.tvNoTest.setText(Integer.toString(model.getxValue()));
+                holder.tvTestMarks.setText(Integer.toString(model.getyValue()));
                 holder.tvtarikh.setText(model.getDateTest());
 
             }

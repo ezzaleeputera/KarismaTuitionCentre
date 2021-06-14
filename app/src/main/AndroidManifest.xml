@@ -61,11 +61,23 @@
 
         </activity>
 
-        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_Home_Pengajar">
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_AttendanceMaking_Pengajar">
 
         </activity>
 
         <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_QRGenerator_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_Home_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_SearchStudent_Pengajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_pengajar.Kehadiran_Activity_ViewKehadiran_Pengajar">
 
         </activity>
 
@@ -74,6 +86,14 @@
         </activity>
 
         <activity android:name=".kehadiran.k_pelajar.Kehadiran_Activity_ViewKehadiran_Pelajar">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_ibubapa.Kehadiran_Activity_SearchStudent_IbuBapa">
+
+        </activity>
+
+        <activity android:name=".kehadiran.k_ibubapa.Kehadiran_Activity_ViewKehadiran_IbuBapa">
 
         </activity>
 
@@ -180,7 +200,7 @@
 
         </activity>
 
-        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewMaklumatPemabayaran_IbuBapa">
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_ViewMaklumatPembayaran_IbuBapa">
 
         </activity>
 
@@ -189,6 +209,9 @@
         </activity>
 
         <activity android:name=".yuran.y_ibubapa.Yuran_Activity_SearchStudent_IbuBapa">
+
+        </activity>
+        <activity android:name=".yuran.y_ibubapa.Yuran_Activity_Home_IbuBapa">
 
         </activity>
 

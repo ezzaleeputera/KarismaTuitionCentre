@@ -54,23 +54,22 @@ public class Prestasi_Activity_ViewTestResult_IbuBapa extends AppCompatActivity 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_linechart_pelajar_test);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Lamandfsdf");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Markah Ujian");
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
+        String User_Key=getIntent().getStringExtra("User_Key");
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        assert user != null;
-        String uid = user.getUid();
+
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         options= new FirebaseRecyclerOptions.Builder<Prestasi_TestMarks_Model>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child(Sub_Key)
-                        .child("Test_List").orderByChild("parentid").equalTo(uid), Prestasi_TestMarks_Model.class)
+                        .child("Test_List").orderByChild("userid").equalTo(User_Key), Prestasi_TestMarks_Model.class)
                 .build();
 
         lineChart=findViewById(R.id.lineChartView);
         databaseReference= FirebaseDatabase.getInstance().getReference(Sub_Key);
-        retrieveData();
+        retrieveData(User_Key);
         lineChart.setDrawGridBackground(true);
         lineChart.setDrawBorders(true);
         lineChart.setBorderWidth(5);
@@ -78,7 +77,8 @@ public class Prestasi_Activity_ViewTestResult_IbuBapa extends AppCompatActivity 
         lineChart.getAxisRight().setEnabled(false);
         lineChart.getAxisRight().setAxisMinimum(0);
         lineChart.getAxisLeft().setAxisMinimum(0);
-
+        lineChart.setNoDataText("Tiada rekod ujian lagi");
+        lineChart.setNoDataTextColor(ContextCompat.getColor(this, R.color.black));
 
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
@@ -117,8 +117,8 @@ public class Prestasi_Activity_ViewTestResult_IbuBapa extends AppCompatActivity 
         adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_IbuBapa>(options) {
             @Override
             protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_IbuBapa holder, int position, @NonNull Prestasi_TestMarks_Model model) {
-                holder.tvNoTest.setText(model.getxValue());
-                holder.tvTestMarks.setText(model.getyValue());
+                holder.tvNoTest.setText(Integer.toString(model.getxValue()));
+                holder.tvTestMarks.setText(Integer.toString(model.getyValue()));
                 holder.tvtarikh.setText(model.getDateTest());
 
             }
@@ -135,13 +135,12 @@ public class Prestasi_Activity_ViewTestResult_IbuBapa extends AppCompatActivity 
         adapter.startListening();
         recyclerView.setAdapter(adapter);
     }
-    private void retrieveData(){
+    private void retrieveData(String User_Key){
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
 
-        assert user != null;
-        String userId=user.getUid();
 
-        databaseReference.child("Test_List").orderByChild("parentid").equalTo(userId).addValueEventListener(new ValueEventListener() {
+
+        databaseReference.child("Test_List").orderByChild("userid").equalTo(User_Key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 ArrayList<Entry> dataVals= new ArrayList<>();

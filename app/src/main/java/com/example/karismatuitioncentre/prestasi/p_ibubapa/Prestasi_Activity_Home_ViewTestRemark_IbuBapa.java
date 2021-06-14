@@ -21,7 +21,9 @@ public class Prestasi_Activity_Home_ViewTestRemark_IbuBapa extends AppCompatActi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_home_viewedit_pengajar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Prestasi");
+        getSupportActionBar().setSubtitle("Pilih untuk melihat ujian atau rumusan");
+
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
         String User_Key=getIntent().getStringExtra("User_Key");
 

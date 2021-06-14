@@ -33,8 +33,6 @@ public class Register_Activity_ExistingParent_Pengajar extends AppCompatActivity
     FirebaseRecyclerOptions<Register_ParentList_Model> options;
     FirebaseRecyclerAdapter<Register_ParentList_Model, Register_MyViewHolder_SearchExisting_Pengajar> adapter;
     DatabaseReference DataRef;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

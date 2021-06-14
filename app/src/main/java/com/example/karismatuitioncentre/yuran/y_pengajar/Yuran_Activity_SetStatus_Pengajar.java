@@ -21,7 +21,7 @@ public class Yuran_Activity_SetStatus_Pengajar extends AppCompatActivity {
     TextView txtNama,txtJan,txtFeb,txtMar,txtApr,txtMei,txtJun,txtJul,txtAug,txtSep,txtOct,txtNov,txtDec,tvMonthlyFee,tvMonthFee;
     Button btnJanCon,btnJanCan,btnFebCon,btnFebCan,btnMarCon,btnMarCan,btnAprCon,btnAprCan,btnMayCon,btnMayCan,btnJunCon,btnJunCan,btnJulCon,btnJulCan,btnAugCon,btnAugCan,btnSepCon,btnSepCan,btnOctCon,btnOctCan,btnNovCon,btnNovCan,btnDecCon,btnDecCan;
     DatabaseReference dataSnapshot,ref;
-    String paid="Paid",unpaid="Unpaid";
+    String paid="Sudah Dibayar",unpaid="Belum Dibayar";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,87 +133,96 @@ public class Yuran_Activity_SetStatus_Pengajar extends AppCompatActivity {
 
 
                     //Button Yuran_Individual: Button Visibility
-                    if(janFee.equals("Unpaid")){
+                    if(janFee.equals("Belum Dibayar")){
                         btnJanCan.setVisibility(View.GONE);
-                    }if(janFee.equals("Paid")){
+                    }if(janFee.equals("Sudah Dibayar")){
                         btnJanCon.setVisibility(View.GONE);
                     }
 
 
-                    if(febFee.equals("Unpaid")){
+                    if(febFee.equals("Belum Dibayar")){
                         btnFebCan.setVisibility(View.GONE);
-                    }if(febFee.equals("Paid")){
+                    }if(febFee.equals("Sudah Dibayar")){
                         btnFebCon.setVisibility(View.GONE);
                     }
 
 
-                    if(marFee.equals("Unpaid")){
+                    if(marFee.equals("Belum Dibayar")){
                         btnMarCan.setVisibility(View.GONE);
                     }
-                    if(marFee.equals("Paid")){
+                    if(marFee.equals("Sudah Dibayar")){
                         btnMarCon.setVisibility(View.GONE);
                     }
 
-                    if(aprFee.equals("Unpaid")){
+
+                    if(aprFee.equals("Belum Dibayar")){
                         btnAprCan.setVisibility(View.GONE);
                     }
-                    if(aprFee.equals("Paid")){
+                    if(aprFee.equals("Sudah Dibayar")){
                         btnAprCon.setVisibility(View.GONE);
                     }
 
-                    if(myFee.equals("Unpaid")){
+
+                    if(myFee.equals("Belum Dibayar")){
                         btnMayCan.setVisibility(View.GONE);
                     }
-                    if(myFee.equals("Paid")){
+                    if(myFee.equals("Sudah Dibayar")){
                         btnMayCon.setVisibility(View.GONE);
                     }
 
-                    if(jnFee.equals("Unpaid")){
+
+                    if(jnFee.equals("Belum Dibayar")){
                         btnJunCan.setVisibility(View.GONE);
                     }
-                    if(jnFee.equals("Paid")){
+                    if(jnFee.equals("Sudah Dibayar")){
                         btnJunCon.setVisibility(View.GONE);
                     }
 
-                    if(julFee.equals("Unpaid")){
+
+                    if(julFee.equals("Belum Dibayar")){
                         btnJulCan.setVisibility(View.GONE);
                     }
-                    if(julFee.equals("Paid")){
+                    if(julFee.equals("Sudah Dibayar")){
                         btnJulCon.setVisibility(View.GONE);
                     }
 
-                    if(augFee.equals("Unpaid")){
+
+                    if(augFee.equals("Belum Dibayar")){
                         btnAugCan.setVisibility(View.GONE);
                     }
-                    if(augFee.equals("Paid")){
+                    if(augFee.equals("Sudah Dibayar")){
                         btnAugCon.setVisibility(View.GONE);
                     }
 
-                    if(sepFee.equals("Unpaid")){
+
+                    if(sepFee.equals("Belum Dibayar")){
                         btnSepCan.setVisibility(View.GONE);
                     }
-                    if(sepFee.equals("Paid")){
+                    if(sepFee.equals("Sudah Dibayar")){
                         btnSepCon.setVisibility(View.GONE);
                     }
 
-                    if(octFee.equals("Unpaid")){
+
+                    if(octFee.equals("Belum Dibayar")){
                         btnOctCan.setVisibility(View.GONE);
                     }
-                    if(octFee.equals("Paid")){
+                    if(octFee.equals("Sudah Dibayar")){
                         btnOctCon.setVisibility(View.GONE);
                     }
 
-                    if(novFee.equals("Unpaid")){
+
+                    if(novFee.equals("Belum Dibayar")){
                         btnNovCan.setVisibility(View.GONE);
                     }
-                    if(novFee.equals("Paid")){
+                    if(novFee.equals("Sudah Dibayar")){
                         btnNovCon.setVisibility(View.GONE);
                     }
 
-                    if(decFee.equals("Unpaid")){
+
+                    if(decFee.equals("Belum Dibayar")){
                         btnDecCan.setVisibility(View.GONE);
                     }
-                    if(decFee.equals("Paid")){
+                    if(decFee.equals("Sudah Dibayar")){
                         btnDecCon.setVisibility(View.GONE);
                     }
 

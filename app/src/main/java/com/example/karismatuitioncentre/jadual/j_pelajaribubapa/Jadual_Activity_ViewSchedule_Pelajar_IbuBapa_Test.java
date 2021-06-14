@@ -32,7 +32,7 @@ public class Jadual_Activity_ViewSchedule_Pelajar_IbuBapa_Test extends AppCompat
         setContentView(R.layout.activity_jadual_pelajar_ibubapa);
         String day_key=getIntent().getStringExtra("day_key");
         Objects.requireNonNull(getSupportActionBar()).setTitle("Senarai Slot Jadual");
-        getSupportActionBar().setSubtitle("day_key");
+        getSupportActionBar().setSubtitle(day_key);
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

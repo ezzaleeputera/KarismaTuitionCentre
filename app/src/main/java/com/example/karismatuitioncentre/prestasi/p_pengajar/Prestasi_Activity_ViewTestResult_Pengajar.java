@@ -74,6 +74,8 @@ public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity
         lineChart.getAxisRight().setEnabled(false);
         lineChart.getAxisRight().setAxisMinimum(0);
         lineChart.getAxisLeft().setAxisMinimum(0);
+        lineChart.setNoDataText("Tiada rekod ujian lagi");
+        lineChart.setNoDataTextColor(ContextCompat.getColor(this, R.color.black));
 
 
         XAxis xAxis = lineChart.getXAxis();
@@ -113,8 +115,8 @@ public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity
         adapter=new FirebaseRecyclerAdapter<Prestasi_TestMarks_Model, Prestasi_MyViewHolder_ViewTestResult_Pengajar>(options) {
             @Override
             protected void onBindViewHolder(@NonNull Prestasi_MyViewHolder_ViewTestResult_Pengajar holder, int position, @NonNull Prestasi_TestMarks_Model model) {
-                holder.tvNoTest.setText(model.getxValue());
-                holder.tvTestMarks.setText(model.getyValue());
+                holder.tvNoTest.setText(Integer.toString(model.getxValue()));
+                holder.tvTestMarks.setText(Integer.toString(model.getyValue()));
                 holder.tvtarikh.setText(model.getDateTest());
             }
 
@@ -160,7 +162,7 @@ public class Prestasi_Activity_ViewTestResult_Pengajar extends AppCompatActivity
 
     private void showChart(ArrayList<Entry> dataVals){
         lineDataSet.setValues(dataVals);
-        lineDataSet.setLabel("BM Performance");
+        lineDataSet.setLabel("Performance");
         iLineDataSets.clear();
         iLineDataSets.add(lineDataSet);
         lineData=new LineData(iLineDataSets);

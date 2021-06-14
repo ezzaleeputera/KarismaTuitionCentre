@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class Prestasi_Activity_SearchStudent_IbuBapa extends AppCompatActivity
     FirebaseRecyclerOptions<Prestasi_StudentList_Model> options;
     FirebaseRecyclerAdapter<Prestasi_StudentList_Model, Prestasi_MyViewHolder_SearchStudent_IbuBapa> adapter;
     DatabaseReference DataRef;
-
+    ImageButton ibSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,38 +52,16 @@ public class Prestasi_Activity_SearchStudent_IbuBapa extends AppCompatActivity
         inputSearch=findViewById(R.id.txtSearch);
         recview= findViewById(R.id.student_list);
         recview.setLayoutManager(new LinearLayoutManager(this));
+        ibSearch=findViewById(R.id.ibSearch);
+        ibSearch.setVisibility(View.GONE);
+        inputSearch.setVisibility(View.GONE);
 
-
-
-        LoadData("",Sub_Key);
-
-        inputSearch.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                LoadData(s.toString(),Sub_Key);
-
-            }
-        });
-
-    }
-
-    private void LoadData(String data, String Sub_Key) {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
-        String pid = user.getUid();
+                   String pid= user.getUid();
 
-        Query query=DataRef.orderByChild("parentid").equalTo(pid).startAt(data).endAt(data+"\uf8ff");
+        Query query=DataRef.orderByChild("parentid").equalTo(pid);
         options= new FirebaseRecyclerOptions.Builder<Prestasi_StudentList_Model>()
                 .setQuery(query, Prestasi_StudentList_Model.class)
                 .build();

@@ -42,19 +42,16 @@ public class Prestasi_Activity_ViewRemarks_IbuBapa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_ulasan);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Lihat Prestasi Pelajar");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Lihat Ulasan Guru");
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
         String User_Key=getIntent().getStringExtra("User_Key");
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        assert user != null;
-        String uid = user.getUid();
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         options= new FirebaseRecyclerOptions.Builder<Prestasi_Remarks_Model>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child(Sub_Key)
-                        .child("Remark_List").orderByChild("parentid").equalTo(uid), Prestasi_Remarks_Model.class)
+                        .child("Remark_List").orderByChild("userid").equalTo(User_Key), Prestasi_Remarks_Model.class)
                 .build();
 
 

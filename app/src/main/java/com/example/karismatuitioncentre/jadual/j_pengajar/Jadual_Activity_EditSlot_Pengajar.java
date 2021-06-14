@@ -3,6 +3,7 @@ package com.example.karismatuitioncentre.jadual.j_pengajar;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
@@ -133,9 +134,18 @@ public class Jadual_Activity_EditSlot_Pengajar extends AppCompatActivity
         });
         submit= findViewById(R.id.add_submit);
         submit.setOnClickListener(view -> {
+            String subjeks=subjek.getText().toString().trim(),pengajars=pengajar.getText().toString();
+
+            if (TextUtils.isEmpty(subjeks)) {
+                subjek.setError("Nama subjek diperlukan");
+                return;
+            }if (TextUtils.isEmpty(pengajars)) {
+                pengajar.setError("Nama Pengajar diperlukan");
+                return;
+            }
 
             Map<String,Object> map=new HashMap<>();
-            map.put("subjek",subjek.getText().toString());
+            map.put("subjek",subjek.getText().toString().trim());
             map.put("pengajar",pengajar.getText().toString());
             map.put("masaSHour",Integer.toString(t1Hour));
             map.put("masaEHour",Integer.toString(t2Hour));

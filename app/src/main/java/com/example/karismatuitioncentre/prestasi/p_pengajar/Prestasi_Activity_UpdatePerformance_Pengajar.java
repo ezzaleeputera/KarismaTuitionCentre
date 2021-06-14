@@ -137,13 +137,13 @@ public class Prestasi_Activity_UpdatePerformance_Pengajar extends AppCompatActiv
 //            String key=FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("List_Student").child("userid").equalTo(User_Key).getRef().getKey();
             FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("List_Student").orderByChild("userid").equalTo(User_Key).addListenerForSingleValueEvent(new ValueEventListener() {
 
-
                 @RequiresApi(api = Build.VERSION_CODES.N)
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    String parentid= dataSnapshot.child("parentid").toString();
 
                     for(DataSnapshot datas: dataSnapshot.getChildren()) {
-                        String parentid=dataSnapshot.child("parentid").toString();
+//                        String parentid= Objects.requireNonNull(dataSnapshot.child("parentid").getValue()).toString();
                         Prestasi_StudentList_Model prestasi_studentList_model= datas.getValue(Prestasi_StudentList_Model.class);
                         assert prestasi_studentList_model != null;
                         int numTest= Math.toIntExact(prestasi_studentList_model.getNumTest());
@@ -154,7 +154,7 @@ public class Prestasi_Activity_UpdatePerformance_Pengajar extends AppCompatActiv
                         assert key != null;
                         Prestasi_TestMarks_Model prestasi_testMarks_model=new Prestasi_TestMarks_Model(x[0]+1,y,User_Key,dateTest,parentid);
 
-                        FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("Test_List").push(). setValue(prestasi_testMarks_model).addOnSuccessListener(aVoid -> {
+                        FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("Test_List").push().setValue(prestasi_testMarks_model).addOnSuccessListener(aVoid -> {
                             add_testM.setText("");
 
                             FirebaseDatabase.getInstance().getReference().child(Sub_Key).child("List_Student").child(SecKey[0]).child("numTest").setValue((x[0]+1));

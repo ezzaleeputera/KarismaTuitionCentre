@@ -18,8 +18,7 @@ public class Kehadiran_Activity_Home_Pelajar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kehadiran_home_pelajar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Yuran");
-
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Kehadiran");
 
         btn_ScanKehadiran = findViewById(R.id.btn_ScanKehadiran);
         btn_SejarahKehadiran = findViewById(R.id.btn_SejarahKehadiran);

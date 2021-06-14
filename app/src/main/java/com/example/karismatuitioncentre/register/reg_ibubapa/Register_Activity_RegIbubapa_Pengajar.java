@@ -118,6 +118,7 @@ public class Register_Activity_RegIbubapa_Pengajar extends AppCompatActivity {
                     Map<String, Object> userIB = new HashMap<>();
                     userIB.put("to_User", "2"); // to_user "2" refer to student
                     userIB.put("email", emailIB);
+                    userIB.put("userid", userID);
                     userIB.put("parentid", userID);
                     ref.child("User_list").push()
                             .setValue(userIB)

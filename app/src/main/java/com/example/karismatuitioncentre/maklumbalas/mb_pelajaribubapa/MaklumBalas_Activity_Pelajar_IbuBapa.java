@@ -23,6 +23,7 @@
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maklumbalas_pelajar_ibubapa);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Senarai Maklum Balas");
+        getSupportActionBar().setSubtitle("Tekan butang + untuk menambah maklum balas");
 
         recyclerView= findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -22,7 +22,7 @@ public class MaklumBalas_Activity_Pengajar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maklumbalas_pengajar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Senarai Maklum Balas");
-        getSupportActionBar().setSubtitle("Buang setelah selesai membaca");
+        getSupportActionBar().setSubtitle("Tekan x untuk membuang maklum balas");
 
         recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

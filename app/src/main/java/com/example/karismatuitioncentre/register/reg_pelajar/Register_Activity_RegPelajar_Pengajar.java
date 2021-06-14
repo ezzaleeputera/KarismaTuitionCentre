@@ -1,5 +1,6 @@
 package com.example.karismatuitioncentre.register.reg_pelajar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -32,7 +33,8 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
     TextView btn_regP;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
-    String numTest="0";
+    int numTest=0;
+    String subPushKey;
 
 
 
@@ -70,7 +72,7 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
         String QuizGradePast="Empty",QuizGradeLatest="Empty",TestGradePast="Empty",TestGradeLatest="Empty",TeacherStatement="Empty";
 
         //Values of Fee
-        String JanFee="Unpaid",FebFee="Unpaid",MarFee="Unpaid",AprFee="Unpaid",MayFee="Unpaid",JunFee="Unpaid",JulFee="Unpaid",AugFee="Unpaid",SepFee="Unpaid",OctFee="Unpaid",NovFee="Unpaid",DecFee="Unpaid";
+        String JanFee="Belum Dibayar",FebFee="Belum Dibayar",MarFee="Belum Dibayar",AprFee="Belum Dibayar",MayFee="Belum Dibayar",JunFee="Belum Dibayar",JulFee="Belum Dibayar",AugFee="Belum Dibayar",SepFee="Belum Dibayar",OctFee="Belum Dibayar",NovFee="Belum Dibayar",DecFee="Belum Dibayar";
 
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
@@ -159,24 +161,34 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
 
         btn_regP.setOnClickListener(view -> {
 
-
             String emailP = emel_regP.getText().toString().trim();
             String namaP = nama_regP.getText().toString().trim();
             String kpP = noKP_regP.getText().toString().trim();
             String klP = kl_regP.getText().toString().trim();
 
 
+
+            if (TextUtils.isEmpty(namaP)) {
+                nama_regP.setError("Nama Diperlukan");
+
+                return;
+            }
+            if (namaP.length() < 6) {
+                noKP_regP.setError("nama perlu >=6  aksara");
+                return;
+            }
+
+
+
             if (TextUtils.isEmpty(emailP)) {
                 emel_regP.setError("Emel Diperlukan");
 
                 return;
-            }            if (TextUtils.isEmpty(emailP)) {
-                emel_regP.setError("Emel Diperlukan");
-
-                return;
             }
-            if (TextUtils.isEmpty(namaP)) {
-                nama_regP.setError("Nama Diperlukan");
+
+
+            if (TextUtils.isEmpty(emailP)) {
+                emel_regP.setError("Emel Diperlukan");
 
                 return;
             }
@@ -240,17 +252,11 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                             .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat pelajar berjaya", Toast.LENGTH_LONG).show())
                             .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
 
-                /*    Map<String, Object> kehadiran = new HashMap<>();
-                    kehadiran.put("userid", userID);
-                    kehadiran.put("recordAtt", "");
-                    ref.child("Kehadiran_List").push()
-                            .setValue(kehadiran)
-                            .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan maklumat pelajar berjaya", Toast.LENGTH_LONG).show())
-                            .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
-*/
 
                     //Student Subjects Mapping
                     if(cbBMStatus[0].equals("1")) {
+                        subPushKey=ref.child("BM_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -259,10 +265,20 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("BM_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                            ref.child("BM_Perf").child("List_Student").child(subPushKey).child("numTest").setValue(numTest);
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbBIStatus[0].equals("1")) {
+                        subPushKey=ref.child("BI_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -271,10 +287,19 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("kp", kpP);
                         ref.child("BI_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbMtStatus[0].equals("1")) {
+                        subPushKey=ref.child("Mt_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -283,10 +308,19 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Mt_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbAMtStatus[0].equals("1")) {
+                        subPushKey=ref.child("AMt_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -295,10 +329,19 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("AMt_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbPhyStatus[0].equals("1")) {
+                        subPushKey=ref.child("Phy_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -307,10 +350,19 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Phy_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbBioStatus[0].equals("1")) {
+                        subPushKey=ref.child("Bio_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -319,10 +371,19 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Bio_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
                     if(cbPpStatus[0].equals("1")) {
+                        subPushKey=ref.child("Pp_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -331,10 +392,20 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Pp_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
+
                     if(cbSaiStatus[0].equals("1")) {
+                        subPushKey=ref.child("Kim_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -343,10 +414,20 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Sai_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
+
                     if(cbKimStatus[0].equals("1")) {
+                        subPushKey=ref.child("Kim_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
@@ -355,20 +436,37 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
                         subject.put("numTest", numTest);
                         ref.child("Kim_Perf").child("List_Student").push()
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                        }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
+
                     if(cbBCStatus[0].equals("1")) {
+                        subPushKey=ref.child("BC_Perf").child("List_Student").push().getKey();
+
                         Map<String, Object> subject = new HashMap<>();
                         subject.put("userid", userID);
                         subject.put("parentid", parentID_key);
                         subject.put("nama", namaP);
                         subject.put("kp", kpP);
-                        subject.put("numTest", numTest);
-                        ref.child("BC_Perf").child("List_Student").push()
+                        assert subPushKey != null;
+                        ref.child("BC_Perf").child("List_Student").child(subPushKey)
                                 .setValue(subject)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show())
+                                .addOnSuccessListener(aVoid -> {
+                                    Toast.makeText(getApplicationContext(), "Penambahan subjek berjaya", Toast.LENGTH_LONG).show();
+                                }
+
+
+
+                                )
                                 .addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Tidak Berjaya", Toast.LENGTH_LONG).show());
+
                     }
 
                     //Student Fee Mapping
@@ -411,4 +509,7 @@ public class Register_Activity_RegPelajar_Pengajar extends AppCompatActivity {
 
 
 }
+
+
+
 

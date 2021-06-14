@@ -63,7 +63,7 @@ public class Yuran_Activity_SearchStudent_Pengajar extends AppCompatActivity
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                s.toString();
                 LoadData(s.toString());
 
             }

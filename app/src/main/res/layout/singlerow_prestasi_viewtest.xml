@@ -131,13 +131,12 @@
 
                         <TextView
                             android:id="@+id/tvtarikh"
-                            android:layout_width="79dp"
-                            android:layout_height="15dp"
-                            android:layout_marginStart="250dp"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="220dp"
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="10dp"
                             android:text="@string/tarikh"
-                            android:textAlignment="viewEnd"
                             android:textColor="#3949AB"
                             android:textSize="12sp"
                             android:textStyle="bold|italic" />

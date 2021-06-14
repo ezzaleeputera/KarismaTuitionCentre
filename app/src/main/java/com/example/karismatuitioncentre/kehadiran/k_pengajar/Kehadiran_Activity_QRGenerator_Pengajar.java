@@ -38,7 +38,6 @@ public class Kehadiran_Activity_QRGenerator_Pengajar extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle("Penjana Kod QR Kehadiran");
         String attKey=getIntent().getStringExtra("attKey");
 
-
         etCode=findViewById(R.id.etCode);
         btnGenerateQR=findViewById(R.id.btnGenerateQRSpecific);
         btnGenerateQRRandom=findViewById(R.id.btnGenerateQRRandom);

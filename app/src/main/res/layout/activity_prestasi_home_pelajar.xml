@@ -15,7 +15,7 @@
             android:id="@+id/btnPerfBM"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             android:width="200dp"
             android:background="@drawable/buttonprestasi"
             android:paddingStart="20dp"

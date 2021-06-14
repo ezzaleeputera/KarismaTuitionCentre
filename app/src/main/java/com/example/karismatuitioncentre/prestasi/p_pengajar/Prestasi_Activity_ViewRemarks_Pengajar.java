@@ -39,7 +39,7 @@ public class Prestasi_Activity_ViewRemarks_Pengajar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_ulasan);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Lihat Prestasi Pelajar");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Lihat Ulasan");
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
         String User_Key=getIntent().getStringExtra("User_Key");
 

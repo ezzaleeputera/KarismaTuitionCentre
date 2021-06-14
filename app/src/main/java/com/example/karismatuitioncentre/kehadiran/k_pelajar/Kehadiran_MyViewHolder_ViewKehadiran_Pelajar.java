@@ -15,10 +15,10 @@ public class Kehadiran_MyViewHolder_ViewKehadiran_Pelajar extends RecyclerView.V
 
     public Kehadiran_MyViewHolder_ViewKehadiran_Pelajar(@NonNull View itemView) {
         super(itemView);
-        subjekHist=(TextView)itemView.findViewById(R.id.subjekHist);
-        pengajarHist=(TextView)itemView.findViewById(R.id.pengajarHist);
-        masaSHist=(TextView)itemView.findViewById(R.id.masaSHist);
-        masaEHist=(TextView)itemView.findViewById(R.id.masaEHist);
+        subjekHist= itemView.findViewById(R.id.subjekHist);
+        pengajarHist= itemView.findViewById(R.id.pengajarHist);
+        masaSHist= itemView.findViewById(R.id.masaSHist);
+        masaEHist= itemView.findViewById(R.id.masaEHist);
         tarikhSHist= itemView.findViewById(R.id.tarikhSHist);
 
         v=itemView;

@@ -18,7 +18,9 @@ public class Prestasi_Activity_Home_UpdateView_Pengajar extends AppCompatActivit
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_home_viewedit_pengajar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Prestasi");
+        getSupportActionBar().setSubtitle("Pilih untuk melihat ujian, rumusan atau penambahan");
+
         String Sub_Key=getIntent().getStringExtra("Sub_Key");
         String User_Key=getIntent().getStringExtra("User_Key");
 

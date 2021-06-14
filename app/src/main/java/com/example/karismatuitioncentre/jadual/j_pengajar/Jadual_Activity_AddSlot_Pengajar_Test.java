@@ -36,7 +36,7 @@ public class Jadual_Activity_AddSlot_Pengajar_Test extends AppCompatActivity
         setContentView(R.layout.activity_jadual_addslot_pengajar);
         String day_key=getIntent().getStringExtra("day_key");
         Objects.requireNonNull(getSupportActionBar()).setTitle("Menambah Maklumat Slot Jadual");
-        getSupportActionBar().setSubtitle("day_key");
+        getSupportActionBar().setSubtitle(day_key);
 
 
         subjek= findViewById(R.id.add_subjek);

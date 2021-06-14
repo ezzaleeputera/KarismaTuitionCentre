@@ -19,6 +19,8 @@ public class Jadual_Activity_Home_Pelajar_IbuBapa_Test extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadual_home);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Halaman Yuran");
+        getSupportActionBar().setSubtitle("Pilih hari dalam jadual");
+
 
         btnIsnin=findViewById(R.id.btn_Isnin);
         btnSelasa=findViewById(R.id.btn_Selasa);

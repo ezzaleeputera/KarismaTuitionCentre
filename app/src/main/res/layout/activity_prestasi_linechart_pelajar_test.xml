@@ -7,59 +7,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/orange_gradient">
 
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChartView"
-        android:layout_width="362dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGraf">
-
-
-    </com.github.mikephil.charting.charts.LineChart>
-
-    <TextView
-        android:id="@+id/yAxisMarkah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:fontFamily="sans-serif-thin"
-        android:shadowColor="#4E3232"
-        android:shadowDx="10"
-        android:shadowRadius="10"
-        android:text="Jumlah Ujian"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineChartView" />
-
-    <TextView
-        android:id="@+id/xAxisMarkah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:fontFamily="sans-serif-thin"
-        android:shadowColor="#4E3232"
-        android:shadowDx="10"
-        android:shadowRadius="10"
-        android:text="Markah"
-        app:layout_constraintVertical_bias="0.2"
-        android:textAllCaps="false"
-        android:textColor="#020101"
-        android:textSize="14sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/lineChartView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGraf" />
-
     <TextView
         android:id="@+id/tvGraf"
         android:layout_width="wrap_content"
@@ -79,6 +26,74 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/xAxisMarkah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif-thin"
+        android:shadowColor="#4E3232"
+        android:shadowDx="10"
+        android:shadowRadius="10"
+        android:text="Markah"
+        android:textAllCaps="false"
+        android:textColor="#020101"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGraf"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvGraf2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGraf">
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChartView"
+            android:layout_width="362dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGraf">
+
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yAxisMarkah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:shadowColor="#4E3232"
+        android:shadowDx="10"
+        android:shadowRadius="10"
+        android:text="Jumlah Ujian"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/tvGraf2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
         android:id="@+id/tvGraf2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,27 +106,27 @@
         android:textColor="#020101"
         android:textSize="24sp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintVertical_bias="0.1"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yAxisMarkah" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="384dp"
-        android:layout_height="297dp"
+        android:layout_width="390dp"
+        android:layout_height="282dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGraf2">
+        android:background="@drawable/search_layout">
+
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:scrollbars="none">
 
             <LinearLayout
@@ -123,9 +138,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingTop="15dp"
                     android:paddingEnd="10dp"
                     android:paddingBottom="5dp"
                     android:scrollbars="vertical" />

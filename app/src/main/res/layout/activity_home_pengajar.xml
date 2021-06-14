@@ -1,113 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@drawable/black_bg">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/black_bg"
-    tools:context=".home.Home_Activity_Pengajar">
 
-        <TableLayout
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-
-            android:paddingBottom="30dp"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/titleHalamanUtama"
-                android:layout_width="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:shadowColor="#231563"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="50"
-                android:text="@string/halaman_utama"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#FFFFFF"
-                android:textSize="40sp"
-                android:textStyle="bold|italic" />
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
 
-            <Button
-                android:id="@+id/btn_Jadual"
-                android:layout_width="303dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="40dp"
-                android:backgroundTint="#D031ABE6"
-                android:drawableStart="@drawable/ic_calendar"
-                android:fadingEdge="horizontal|vertical"
-                android:foregroundTint="#FFFFFF"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/jadual"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                android:paddingBottom="30dp"
+                android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/btn_Kehadiran"
-                android:layout_width="303dp"
-                android:layout_height="112dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#FDD835"
-                android:drawableStart="@drawable/ic_check_circle"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/kehadiran"
-                android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/titleHalamanUtama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:shadowColor="#231563"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="50"
+                    android:text="@string/halaman_utama"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold|italic" />
 
-            <Button
-                android:id="@+id/btn_Yuran"
-                android:layout_width="303dp"
-                android:layout_height="112dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#AADF72"
-                android:drawableStart="@drawable/ic_dollar"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/yuran"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_Jadual"
+                    android:layout_width="303dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="40dp"
+                    android:backgroundTint="#D031ABE6"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:fadingEdge="horizontal|vertical"
+                    android:foregroundTint="#FFFFFF"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/jadual"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_Pendaftaran"
-                android:layout_width="303dp"
-                android:layout_height="112dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#D85183"
-                android:drawableStart="@drawable/ic_add_box"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/pendaftaran"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_Kehadiran"
+                    android:layout_width="303dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="#FDD835"
+                    android:drawableStart="@drawable/ic_check_circle"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/kehadiran"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_LPrestasi"
-                android:layout_width="303dp"
-                android:layout_height="112dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="0dp"
-                android:backgroundTint="#E67C5B"
-                android:drawableStart="@drawable/ic_chart"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/laporan_prestasi"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/btn_Yuran"
+                    android:layout_width="303dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="#AADF72"
+                    android:drawableStart="@drawable/ic_dollar"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/yuran"
+                    android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/btn_MaklumBalas"
-                android:layout_width="303dp"
-                android:layout_height="112dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="40dp"
-                android:backgroundTint="#8E5C5C"
-                android:drawableStart="@drawable/ic_feedback"
-                android:shadowColor="#000000"
-                android:shadowRadius="2"
-                android:text="@string/maklum_balas"
-                android:textSize="30sp" />
-        </TableLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/btn_Pendaftaran"
+                    android:layout_width="303dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="#D85183"
+                    android:drawableStart="@drawable/ic_add_box"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/pendaftaran"
+                    android:textSize="30sp" />
 
+                <Button
+                    android:id="@+id/btn_LPrestasi"
+                    android:layout_width="303dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="0dp"
+                    android:backgroundTint="#E67C5B"
+                    android:drawableStart="@drawable/ic_chart"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/laporan_prestasi"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/btn_MaklumBalas"
+                    android:layout_width="303dp"
+                    android:layout_height="112dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="40dp"
+                    android:backgroundTint="#8E5C5C"
+                    android:drawableStart="@drawable/ic_feedback"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="2"
+                    android:text="@string/maklum_balas"
+                    android:textSize="30sp" />
+            </TableLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0C273E"
+        android:clickable="true"
+        android:contentDescription="@string/tambah_maklum_balas"
+        android:focusable="true"
+        android:foregroundTint="#130040"
+        app:backgroundTint="#BA8BF3"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
+        app:srcCompat="@drawable/ic_person" />
+
+</FrameLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Karisma Tuition Centre</string>
-    <string name="emel">emel</string>
+    <string name="emel">e-mel</string>
     <string name="kata_laluan">kata laluan</string>
     <string name="hantar">Hantar</string>
     <string name="logo">Logo</string>
@@ -48,7 +48,7 @@
     <string name="tajuk_maklum_balas">Tajuk Maklum Balas</string>
     <string name="kembali">Kembali</string>
     <string name="name">Name</string>
-    <string name="email">Email</string>
+    <string name="email">E-mel</string>
     <string name="kp">KP</string>
     <string name="tajuk_ulasan">Tajuk ulasan</string>
     <string name="ulasan">Ulasan</string>
@@ -72,12 +72,15 @@
     <string name="status_yuran_febuari">Status Yuran Febuari:</string>
     <string name="status_pembayaran">Status Pembayaran</string>
     <string name="sudah_membayar">Sudah Membayar</string>
-    <string name="confirm_payment">Confirm Payment</string>
-    <string name="ruang_hantar_rumusan_prestasi_terkini_pelajar">Ruang Hantar Rumusan Prestasi Terkini Pelajar</string>
-    <string name="berikan_tajuk_rumusan">Berikan Tajuk Rumusan</string>
-    <string name="berikan_rumusan_terkini_pelajar_cth_sikap_tips">Berikan Rumusan Terkini Pelajar. cth:(Sikap/ Tips)</string>
+    <string name="confirm_payment">Sahkan Pembayaran</string>
+    <string name="ruang_hantar_rumusan_prestasi_terkini_pelajar">Ruang Hantar Ulasan Prestasi Terkini Pelajar</string>
+    <string name="berikan_tajuk_rumusan">Berikan Tajuk Ulasan</string>
+    <string name="berikan_rumusan_terkini_pelajar_cth_sikap_tips">Berikan Ulasan Terkini Pelajar. cth:(Nasihat/ Tips)</string>
     <string name="ruang_isi_markah_ujian_terkini_pelajar">Ruang Isi Markah Ujian Terkini Pelajar</string>
     <string name="berikan_markah_1_100">Berikan Markah (1–100)</string>
+    <string name="nama_pemilik_akaun">Nama Pemilik Akaun</string>
+    <string name="no_akaun_bank">No. Akaun Bank :</string>
+    <string name="nama_bank">Nama Bank</string>
 
 
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="384dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#FDD835"
+        android:background="#FFB300"
         android:padding="15dp"
         android:paddingTop="30dp"
         android:paddingBottom="30dp">

@@ -82,7 +82,7 @@
         android:hint="@string/nombor_kad_pengenalan"
         android:imeActionLabel=""
         android:imeOptions="actionDone"
-        android:inputType="textPostalAddress"
+        android:inputType="number"
         android:selectAllOnFocus="true"
         android:shadowColor="#121111"
         android:shadowRadius="5"

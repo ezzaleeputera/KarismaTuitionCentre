@@ -15,7 +15,8 @@ public class Register_Activity_HomeExistingNewParent_Pengajar extends AppCompatA
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_home_existingnewparent_pengajar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Pendaftaran");
+        getSupportActionBar().setSubtitle("Pilih ibu bapa baru atau sedia ada");
 
         btn_NewParents = findViewById(R.id.btn_NewParents);
         btn_ExistingParents = findViewById(R.id.btn_ExistingParents);

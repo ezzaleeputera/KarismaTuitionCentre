@@ -18,7 +18,8 @@ public class Prestasi_Activity_Home_Pelajar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prestasi_home_pelajar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Laman Prestasi");
+        getSupportActionBar().setSubtitle("Pilih subjek yang tertentu");
 
 
         btnPerfBM = findViewById(R.id.btnPerfBM);

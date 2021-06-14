@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
-public class Yuran_Activity_ViewMaklumatPemabayaran_IbuBapa extends AppCompatActivity {
+public class Yuran_Activity_ViewMaklumatPembayaran_IbuBapa extends AppCompatActivity {
     TextView tvNB,tvNPA,tvNAB;
     DatabaseReference databaseReference;
 

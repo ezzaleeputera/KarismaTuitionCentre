@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/yellow_light">
+    android:background="@drawable/orange_peel">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -16,27 +16,29 @@
             android:id="@+id/btn_ViewTestResult"
             android:layout_width="303dp"
             android:layout_height="112dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
 
-            android:backgroundTint="#FABBA6"
-
+            android:background="@drawable/black_border"
+            android:backgroundTint="#FFB300"
+            android:foreground="@drawable/black_border"
             android:shadowColor="#000000"
             android:shadowRadius="2"
             android:text="@string/lihat_keputusan_ujian"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_ViewRemark"
             android:layout_width="303dp"
             android:layout_height="112dp"
             android:layout_marginTop="40dp"
-
+            android:background="@drawable/black_border"
             android:backgroundTint="#D66541"
+            android:foreground="@drawable/black_border"
 
             android:shadowColor="#000000"
             android:shadowRadius="2"
             android:text="@string/lihat_ulasan_pengajar"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_EditPerformance"
@@ -44,11 +46,13 @@
             android:layout_height="112dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="0dp"
-            android:backgroundTint="#953011"
+            android:background="@drawable/black_border"
+            android:backgroundTint="#F4511E"
+            android:foreground="@drawable/black_border"
             android:shadowColor="#000000"
             android:shadowRadius="2"
             android:text="@string/tambah_prestasi"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
     </TableLayout>
 </ScrollView>
