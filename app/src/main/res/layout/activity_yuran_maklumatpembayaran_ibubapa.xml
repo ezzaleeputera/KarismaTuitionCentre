@@ -8,7 +8,7 @@ android:layout_width="match_parent"
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,6 +20,8 @@ android:layout_width="match_parent"
             android:layout_width="123dp"
             android:layout_height="74dp"
             android:paddingStart="5dp"
+            android:layout_marginStart="10dp"
+
             android:background="@drawable/border_payment"
             android:text="@string/nama_bank"
             android:textColor="#000000"
@@ -29,11 +31,13 @@ android:layout_width="match_parent"
 
         <TextView
             android:id="@+id/tvNB"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="72dp"
             android:background="@drawable/border_payment2"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:layout_marginEnd="15dp"
+
             android:text="@string/nama_bank"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -48,7 +52,7 @@ android:layout_width="match_parent"
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +66,8 @@ android:layout_width="match_parent"
             android:background="@drawable/border_payment"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
+            android:layout_marginStart="10dp"
+
             android:text="Nama Pemilik Akaun :"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -70,12 +76,13 @@ android:layout_width="match_parent"
 
         <TextView
             android:id="@+id/tvNPA"
-            android:layout_width="250dp"
-            android:layout_height="78dp"
-            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/border_payment2"
-
+            android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:layout_marginEnd="15dp"
+
             android:text="@string/nama_pemilik_akaun"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -87,18 +94,18 @@ android:layout_width="match_parent"
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
             android:id="@+id/tvNomborAkaunBank"
             android:layout_width="131dp"
             android:layout_height="77dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/border_payment"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
@@ -110,15 +117,18 @@ android:layout_width="match_parent"
 
         <TextView
             android:id="@+id/tvNAB"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="78dp"
-            android:paddingStart="10dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/border_payment2"
 
+            android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@string/no_akaun_bank"
             android:textColor="#000000"
             android:textSize="20sp"
+
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.444"

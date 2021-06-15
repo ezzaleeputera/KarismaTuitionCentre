@@ -82,6 +82,7 @@
         android:layout_width="235dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
+
         android:background="#B4E67F"
         android:paddingStart="5dp"
         android:paddingTop="5dp"
@@ -98,14 +99,14 @@
         android:id="@+id/etNBsmy"
         android:layout_width="255dp"
         android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+
         android:ems="10"
         android:hint="Isi nama bank.."
         android:inputType="textPersonName"
         android:textColorHint="#BC120E0E"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvNPAsmy"
-        app:layout_constraintEnd_toStartOf="@+id/btnNBsmy"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNBsmy"
         app:layout_constraintVertical_bias="0.0" />
@@ -121,8 +122,6 @@
         android:textColorHint="#BC120E0E"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvNABsmy"
-        app:layout_constraintEnd_toStartOf="@+id/btnNPAsmy"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNPAsmy"
         app:layout_constraintVertical_bias="0.0" />
@@ -155,7 +154,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/etNABsmy"
         app:layout_constraintTop_toBottomOf="@+id/NABsmy"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.002" />
 
     <Button
         android:id="@+id/btnNPAsmy"
@@ -168,8 +167,10 @@
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/NABsmy"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etNPAsmy"
         app:layout_constraintTop_toBottomOf="@+id/NPAsmy"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.011" />
 
     <Button
         android:id="@+id/btnNBsmy"
@@ -182,7 +183,9 @@
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/NPAsmy"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etNBsmy"
         app:layout_constraintTop_toBottomOf="@+id/NBsmy"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -152,17 +152,12 @@ import java.util.Objects;
              }
          });
 
-         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-             @Override
-             public void onClick(DialogInterface dialog, int which) {
-                 dialog.dismiss();
-             }
-         });
+         builder.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
          builder.create().show();
      }
      private void beginRecovery(String emaill) {
          loadingBar=new ProgressDialog(this);
-         loadingBar.setMessage("Sending Email....");
+         loadingBar.setMessage("Menghantar E-mel....");
          loadingBar.setCanceledOnTouchOutside(false);
          loadingBar.show();
 
@@ -171,10 +166,10 @@ import java.util.Objects;
              if(task.isSuccessful())
              {
 
-                 Toast.makeText(Login_Activity.this,"Done sent",Toast.LENGTH_LONG).show();
+                 Toast.makeText(Login_Activity.this,"Berjaya hantar",Toast.LENGTH_LONG).show();
              }
              else {
-                 Toast.makeText(Login_Activity.this,"Error Occured",Toast.LENGTH_LONG).show();
+                 Toast.makeText(Login_Activity.this,"Ralat Berlaku",Toast.LENGTH_LONG).show();
              }
          }).addOnFailureListener((OnFailureListener) e -> {
              loadingBar.dismiss();
